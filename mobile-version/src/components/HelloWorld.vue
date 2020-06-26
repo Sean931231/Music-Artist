@@ -56,6 +56,6 @@ export default {
   bottom: 8px;
   width: 100%;
   height: 20px;
-  background: #ecf6ff;
+  /* background: #ecf6ff; */
 }
 </style>

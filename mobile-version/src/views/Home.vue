@@ -1,16 +1,13 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Mand Mobile"/>
+    <img src="../assets/Font/title.svg" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 export default {
   name: "home",
   components: {
-    HelloWorld
   }
 };
 </script>
