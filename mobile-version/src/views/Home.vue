@@ -1,13 +1,16 @@
 <template>
   <div class="home">
-    <img src="../assets/Font/title.svg" />
+    <Title />
   </div>
 </template>
 
 <script>
+import Title from "@/components/Title.vue";
+
 export default {
   name: "home",
   components: {
+    Title,
   }
 };
 </script>

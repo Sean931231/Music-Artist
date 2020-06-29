@@ -1,0 +1,29 @@
+svg {
+    font-family: Georgia;
+    position: relative;
+    width: 90vw;
+    text-align: center;
+}
+
+#JapText {
+    fill: #fff;
+    // stroke: transparent;
+    // fill: #ccc;
+    stroke: #000;
+    stroke-width: 3;
+    stroke-dasharray: 1110;
+    // animation: textAnimation 4s infinite cubic-bezier(0, 0.23, 1, 0.1);
+    animation: textAnimation 3s infinite alternate;
+}
+
+@keyframes textAnimation {
+    0% {
+        stroke-dasharray: 0 50%;
+        fill: #fff;
+    }
+    
+    100% {
+        stroke-dasharray: 50% 0;
+        fill: #ccc;
+    }
+}
