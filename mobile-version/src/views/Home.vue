@@ -4,66 +4,76 @@
       <Title />
     </div>
 
-    <div class="swiper-position">
-      <md-swiper
-        :autoplay="5000"
-        transition="fade"
-        ref="swiper">
-        <md-swiper-item :key="index" v-for="(item, index) in images">
-            <img :src="item.img" class="banner-item">
-        </md-swiper-item>
-
-      </md-swiper>
+    <div class="content-position">
+      <div class="loading-content">
+        <md-skeleton avatar title :loading="loading">
+        </md-skeleton>
+      </div>
+      <div class="real-content">
+        <md-skeleton
+          :loading="loading"
+          :row="2"
+          class="skeleton-item"
+          v-for="artist in artists"
+          :key="artist">
+          <md-cell-item :title="artist.ename" :brief="artist.cname" addon="Profile" arrow>
+            <img :src="artist.img" class="holder" slot="left" >
+          </md-cell-item>
+        </md-skeleton>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Title from "@/components/Title.vue";
-import {Swiper, SwiperItem} from 'mand-mobile';
+import {Skeleton, Field, CellItem} from 'mand-mobile'
 
 export default {
   name: "home",
+
   components: {
     Title,
-    [Swiper.name]: Swiper,
-    [SwiperItem.name]: SwiperItem,
+    [Skeleton.name]: Skeleton,
+    [Field.name]: Field,
+    [CellItem.name]: CellItem,
   },
+
   data() {
     return {
-      images: [
-        { 
-          img: require('../assets/image/Yonezu Kenshi/bootleg_slyder.jpg'),
-          alt: 'artist',
-          url: "/about"
+      loading: true,
+
+      artists: [
+        {
+          img: require('../assets/image/YonezuKenshi/PROFILE_orion2.jpg'),
+          ename: 'Yonezu Kenshi',
+          cname: '米津玄師'
         },
-        { 
-          img: require('../assets/image/Yonezu Kenshi/HaiiroToAo_Slyder.jpg'),
-          alt: 'artist',
-          url: "/artist"
-        },
-        { 
-          img: require('../assets/image/Yonezu Kenshi/Lemon_Slyder2.jpg'),
-          alt: 'artist'
+        {
+          img: require('../assets/image/Sirup/sirup.jpg'),
+          ename: 'Sirup',
+          cname: ''
         }
       ]
     }
   },
   
   mounted() {
-    // console.log(this.images.url);
+    window.startLoading = this.startLoading
+    this.startLoading()
   },
 
   methods: {
-    beforeChange(from, to) {
-      this.setValue('#valueSwiper0', from)
-      this.setValue('#valueSwiper1', to)
-    },
-    afterChange(from, to) {
-      this.setValue('#valueSwiper2', from)
-      this.setValue('#valueSwiper3', to)
-    },
+    startLoading() {
+      this.loading = true;
+      setTimeout(() => {
+        this.loading = false
+      }, 3000)
+
+    }
   },
+
+  
 };
 </script>
 

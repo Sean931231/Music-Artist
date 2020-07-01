@@ -4,7 +4,7 @@
             <defs>
                 <text id="JapText" x="287.69" y="92.11" font-size="400" font-weight="400" font-style="normal" xml:space="preserve">
                 <tspan x="287.69" dy="0em" alignment-baseline="before-edge" dominant-baseline="text-before-edge" text-anchor="middle">
-                Japtist
+                PAGE
                 </tspan>
                 </text>    
             </defs>

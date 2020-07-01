@@ -6,19 +6,37 @@
         // background-color: green;
         margin-bottom: 4vw;
     }
-    .swiper-position {
+
+    .content-position {
         position: relative;
-        width: 92vw;
-        height: 44vw;
-        // background-color: black;
-        border-radius: 3vw;
-        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-        
-        .banner-item {
-            position: relative;
-            width: 92vw;
-            height: 44vw;
-            border-radius: 3vw;
+
+        .md-skeleton {
+            margin: 4vw 0;
         }
+
+        // .skeleton-switch {
+        //     margin-bottom: 4vw;
+
+        //     .skeleton-item {
+        //         &:last-child {
+        //             margin-bottom: 0;
+        //             margin-bottom: 24px;
+        //         }
+
+        //         .md-cell-item {
+        //             &.skeleton-item {
+        //                 margin-bottom: 0;
+        //             }
+
+        //         }
+        //     }
+        // }
+            .holder {
+                display: block;
+                width: 11vw;
+                height: 10.5vw;
+                border-radius: 50%;
+                background-color: #ccc;
+            }
     }
 }
