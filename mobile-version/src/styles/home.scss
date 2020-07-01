@@ -1,0 +1,24 @@
+.home {
+    position: relative;
+    
+    .title-position {
+        position: relative;
+        // background-color: green;
+        margin-bottom: 4vw;
+    }
+    .swiper-position {
+        position: relative;
+        width: 92vw;
+        height: 44vw;
+        // background-color: black;
+        border-radius: 3vw;
+        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        
+        .banner-item {
+            position: relative;
+            width: 92vw;
+            height: 44vw;
+            border-radius: 3vw;
+        }
+    }
+}

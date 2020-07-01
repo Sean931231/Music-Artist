@@ -38,7 +38,7 @@ export default {
 }
 
 .hello h1 {
-  color: #333;
+  color: #ccc;
   line-height: 1.15;
   font-size: 64px;
   margin-bottom: 32px;

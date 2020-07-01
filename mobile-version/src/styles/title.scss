@@ -6,24 +6,24 @@ svg {
 }
 
 #JapText {
-    fill: #fff;
+    fill: #323233;
     // stroke: transparent;
     // fill: #ccc;
-    stroke: #000;
+    stroke: #000000;
     stroke-width: 3;
     stroke-dasharray: 1110;
     // animation: textAnimation 4s infinite cubic-bezier(0, 0.23, 1, 0.1);
-    animation: textAnimation 3s infinite alternate;
+    animation: textAnimation 5s infinite alternate;
 }
 
 @keyframes textAnimation {
     0% {
         stroke-dasharray: 0 50%;
-        fill: #fff;
+        fill: #ffffff;
     }
     
     100% {
         stroke-dasharray: 50% 0;
-        fill: #ccc;
+        fill: #323233;
     }
 }

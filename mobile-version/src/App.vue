@@ -1,24 +1,32 @@
 <template>
   <div id="app">
-    <Header/>
+    <div class="content">
+      <router-view/>
+    </div>
+    <Footer/>
   </div>
 </template>
 
 <script>
-  import Header from "@/components/Header.vue";
+  import Footer from "@/components/Footer.vue";
   export default {
     components: {
-      Header
+      Footer
     }
   }
 </script>
 
 <style scoped>
 #app {
+  position: relative;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  /* color: #2c3e50; */
+  /* color: #1E1E1E; */
+}
+.content {
+  padding: 4vw;
 }
 </style>

@@ -1,16 +1,5 @@
 <template>
-  <div id="nav">
-    <!-- <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> -->
-
-      <md-tab-bar
-        v-model="current"
-        :items="items"
-        @change="onChange"
-      >
-      </md-tab-bar>
-      <router-view/>
-  </div>
+  
 </template>
 
 <script>
@@ -29,11 +18,16 @@ export default {
           name: 'Home',
           label: 'Home',
           path: '/'
-        }, 
+        },
+        {
+          name: 'Artist',
+          label: 'Artist',
+          path: '/artist'
+        },
         {
           name: 'About',
           label: 'About',
-          path: '/About'
+          path: '/about'
         }
       ],
       arrs: [1, 3, 5, 7, 9],
