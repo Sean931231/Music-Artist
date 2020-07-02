@@ -14,8 +14,8 @@
           :loading="loading"
           :row="2"
           class="skeleton-item"
-          v-for="artist in artists"
-          :key="artist">
+          v-for="(artist, index) in artists"
+          :key="index">
           <md-cell-item :title="artist.ename" :brief="artist.cname" addon="Profile" arrow>
             <img :src="artist.img" class="holder" slot="left" >
           </md-cell-item>
@@ -50,7 +50,7 @@ export default {
           cname: '米津玄師'
         },
         {
-          img: require('../assets/image/Sirup/sirup.jpg'),
+          img: require('../assets/image/Sirup/avatar.jpg'),
           ename: 'Sirup',
           cname: ''
         }
@@ -68,7 +68,7 @@ export default {
       this.loading = true;
       setTimeout(() => {
         this.loading = false
-      }, 3000)
+      }, 1000)
 
     }
   },

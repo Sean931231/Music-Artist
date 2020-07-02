@@ -19,11 +19,13 @@ svg {
 @keyframes textAnimation {
     0% {
         stroke-dasharray: 0 50%;
-        fill: #ffffff;
+        fill: #323233;
+        // fill: #ffffff;
     }
     
     100% {
         stroke-dasharray: 50% 0;
-        fill: #323233;
+        fill: #ffffff;
+        // fill: #323233;
     }
 }

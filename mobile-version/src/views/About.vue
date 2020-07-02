@@ -20,6 +20,7 @@ import {Swiper, SwiperItem} from 'mand-mobile';
 
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
+
 export default {
   name: "about",
   components: {
