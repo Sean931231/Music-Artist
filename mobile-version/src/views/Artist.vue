@@ -1,45 +1,61 @@
 <template>
-    <div>
-        <h3> {{results.title}} </h3>
-        <div>
-            <p>
-                name :{{ results.author }}
-                time: {{ results.date }}
+    <div class="artist">
+        <div class="artist-content">
+            <p style="font-size: 5vw">
+                name:{{ results.author }}
+            </p>
+            <p style="font-size: 5vw">
+                time:{{ results.date }}
             </p>
         </div>
+        <br>
     </div>
 </template>
 
 <script>
 import axios from 'axios';
+import test from '@/views/Home.vue';
 
 export default {
     name: 'artist',
+    components: {
+        test,
+    },
     data() {
         return {
             baseUrl: process.env.VUE_APP_BASE_url,
             results: []
         }
     },
+
+    props: [
+        'ename'
+    ],
+
     mounted() {
-        // this.fetchData();
-        this.getData();
+        this.getUrl();
     },
     methods: {
+        getUrl() {
+            // console.log(this.$route.params.ename);
+            // getData(this.$route.params);
+            this.getData(this.$route.params)
+        },
+
         fetchData() {
-            // axios.get(this.baseUrl + '/static/test.json')
             axios.get("/static/test.json")
                 .then(response => {
-                    console.log(response.data)
+
                 })
         },
 
-        getData() {
+        getData(params) {
+            // console.log(params.ename);
             axios.get("/json/demo.json")
                 .then(response => {
                     this.results = response.data;
-                    console.log(this.results);
                 })
+                console.log(this.results);
         }
     }
 }

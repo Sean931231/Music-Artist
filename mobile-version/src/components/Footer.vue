@@ -28,11 +28,11 @@ export default {
             label: 'Home',
             path: '/'
         },
-        {
-            name: 'Artist',
-            label: 'Artist',
-            path: '/artist'
-        },
+        // {
+        //     name: 'Artist',
+        //     label: 'Artist',
+        //     path: '/artist'
+        // },
         {
             name: 'About',
             label: 'About',

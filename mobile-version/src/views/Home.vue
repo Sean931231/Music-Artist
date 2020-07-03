@@ -16,11 +16,17 @@
           class="skeleton-item"
           v-for="(artist, index) in artists"
           :key="index">
-          <md-cell-item :title="artist.ename" :brief="artist.cname" addon="Profile" arrow>
-            <img :src="artist.img" class="holder" slot="left" >
-          </md-cell-item>
+            <md-cell-item :title="artist.ename" :brief="artist.cname" addon="Profile" arrow @click="next(artist)">
+              <img :src="artist.img" class="holder" slot="left">
+            </md-cell-item>
         </md-skeleton>
       </div>
+    </div>
+
+    <div class="testbind">
+      <p >
+        Matt
+      </p>
     </div>
   </div>
 </template>
@@ -54,7 +60,7 @@ export default {
           ename: 'Sirup',
           cname: ''
         }
-      ]
+      ],
     }
   },
   
@@ -68,8 +74,16 @@ export default {
       this.loading = true;
       setTimeout(() => {
         this.loading = false
-      }, 1000)
+      }, 100)
+    },
 
+    next(artist) {
+      this.$router.push({
+        name: 'Artist',
+        params: {
+          ename: artist,
+        }
+      });
     }
   },
 

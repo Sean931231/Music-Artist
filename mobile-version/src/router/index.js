@@ -21,7 +21,8 @@ Vue.use(VueRouter)
   {
     path: '/artist',
     name: 'Artist',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Artist.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Artist.vue'),
+    props: true
   }
 ]
 
