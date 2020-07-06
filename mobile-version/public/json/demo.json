@@ -1,16 +1,36 @@
 {
-    "Yonezu Kenshi": {
-        "title": "Demo Only Yonezu",
-        "artist_name": "Yonezu Kenshi",
-        "author": "Sean",
-        "type": "test1",
-        "date": "2020/07/02"
-    },
-    "Sirup": {
-        "title": "Demo Only Sirup",
-        "artist_name": "Sirup",
-        "author": "Sean",
-        "type": "test2",
-        "date": "2020/07/03"
-    }
+    "status": "success",
+    "data": [
+        {
+            "id": "1",
+            "artist_name": "Yonezu Kenshi",
+            "title": "Demo Only Yonezu",
+            "date": "2020/07/02",
+            "profile_image": "require('../assets/image/YonezuKenshi/Kenshi.jpg')",
+            "banner" : [
+                { 
+                    "img": "require('../assets/image/YonezuKenshi/bootleg_slyder.jpg')",
+                    "alt": "Yonezu"
+                },
+                { 
+                    "img": "require('../assets/image/YonezuKenshi/HaiiroToAo_Slyder.jpg')",
+                    "alt": "Yonezu"
+                },
+                { 
+                    "img": "require('../assets/image/YonezuKenshi/Lemon_Slyder2.jpg')",
+                    "alt": "Yonezu"
+                }
+            ],
+            "author" : "Sean"
+        },
+        {
+            "id": "2",
+            "artist_name": "Sirup",
+            "title": "Demo Only Yonezu",
+            "date": "2020/07/03",
+            "profile_image": "require('../assets/image/Sirup/avatar.jpg')",
+            "banner" : [],
+            "author" : "Sean"
+        }
+    ]
 }
