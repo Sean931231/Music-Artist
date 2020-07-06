@@ -22,12 +22,6 @@
         </md-skeleton>
       </div>
     </div>
-
-    <div class="testbind">
-      <p >
-        Matt
-      </p>
-    </div>
   </div>
 </template>
 
@@ -51,7 +45,7 @@ export default {
 
       artists: [
         {
-          img: require('../assets/image/YonezuKenshi/PROFILE_orion2.jpg'),
+          img: require('../assets/image/YonezuKenshi/Kenshi.jpg'),
           ename: 'Yonezu Kenshi',
           cname: '米津玄師'
         },
@@ -81,12 +75,11 @@ export default {
       this.$router.push({
         name: 'Artist',
         params: {
-          ename: artist,
+          ename: artist.ename,
         }
       });
     }
   },
-
   
 };
 </script>

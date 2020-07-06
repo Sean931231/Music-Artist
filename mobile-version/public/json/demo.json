@@ -8,18 +8,9 @@
             "date": "2020/07/02",
             "profile_image": "require('../assets/image/YonezuKenshi/Kenshi.jpg')",
             "banner" : [
-                { 
-                    "img": "require('../assets/image/YonezuKenshi/bootleg_slyder.jpg')",
-                    "alt": "Yonezu"
-                },
-                { 
-                    "img": "require('../assets/image/YonezuKenshi/HaiiroToAo_Slyder.jpg')",
-                    "alt": "Yonezu"
-                },
-                { 
-                    "img": "require('../assets/image/YonezuKenshi/Lemon_Slyder2.jpg')",
-                    "alt": "Yonezu"
-                }
+                "../assets/image/YonezuKenshi/bootleg_slyder.jpg",
+                "../assets/image/YonezuKenshi/HaiiroToAo_Slyder.jpg",
+                "../assets/image/YonezuKenshi/Lemon_Slyder2.jpg"
             ],
             "author" : "Sean"
         },
