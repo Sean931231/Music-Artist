@@ -9,6 +9,7 @@
 
 <script>
   import Footer from "@/components/Footer.vue";
+
   export default {
     components: {
       Footer
@@ -16,7 +17,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 #app {
   position: relative;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -28,5 +29,6 @@
 }
 .content {
   padding: 4vw;
+  padding-bottom: 20vw;
 }
 </style>

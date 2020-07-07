@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.artist {
+    color: #2c3e50;
+
+    .title {
+        font-family: 'Indie Flower', cursive;
+        text-align: center;
+        font-size: 8vw;
+        color: #bb3636;
+        text-decoration: underline;
+
+        img {
+            width: 7vw;
+        }
+    }
+
+    .artist-intro {
+        img {
+            width: 80vw;
+            height: 45vw;
+            box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        p {
+            font-size: 5vw;
+            text-align: left;
+            font-family: 'Rokkitt', serif;
+        }
+    }
+
+    .swiper-position {
+        position: relative;
+        width: 92vw;
+        height: 44vw;
+        // background-color: black;
+        border-radius: 3vw;
+        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        
+        .banner-item {
+            position: relative;
+            width: 92vw;
+            height: 44vw;
+            border-radius: 3vw;
+        }
+    }
+
+    // 通用
+    .divider {
+        padding: 2.5vw 0;
+    }
+    .bold {
+        font-weight: bold;
+        color: #000000;
+    }
+}

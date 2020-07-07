@@ -76,9 +76,6 @@ export default {
     next(artist) {
       this.$router.push({
         name: 'Artist',
-        params: {
-          ename: artist.ename
-        },
         query: {
           id: artist.id,
         }
