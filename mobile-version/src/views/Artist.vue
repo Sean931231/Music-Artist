@@ -33,20 +33,18 @@ export default {
 
     mounted() {
         this.init();
-        this.getData();
     },
     methods: {
         init() {
-            
+            let pageid = this.$route.query.id;
+            this.getData(pageid);
         },
 
-        getData() {
-            // console.log(this.ename);
+        getData(id) {
             axios.get("/json/demo.json", {
                 }).then(response => {
                     if(response.status) {
-                        this.results = response.data.data;
-                        this.artists = this.results.find(result => result.artist_name == this.ename);
+                        this.artists = response.data.data.find(result => result.id == id);
                         console.log(this.artists);
                     }
                 })
@@ -58,7 +56,13 @@ export default {
 
                 })
         }
-    }
+    },
+
+    watch: {
+        $route() {
+            this.init();
+        }
+    },
 }
 </script>
 

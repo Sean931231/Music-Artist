@@ -44,12 +44,14 @@ export default {
       loading: true,
 
       artists: [
-        {
+        { 
+          id: 1,
           img: require('../assets/image/YonezuKenshi/Kenshi.jpg'),
           ename: 'Yonezu Kenshi',
           cname: '米津玄師'
         },
-        {
+        { 
+          id: 2,
           img: require('../assets/image/Sirup/avatar.jpg'),
           ename: 'Sirup',
           cname: ''
@@ -75,7 +77,10 @@ export default {
       this.$router.push({
         name: 'Artist',
         params: {
-          ename: artist.ename,
+          ename: artist.ename
+        },
+        query: {
+          id: artist.id,
         }
       });
     }

@@ -2,20 +2,20 @@
     "status": "success",
     "data": [
         {
-            "id": "1",
+            "id": 1,
             "artist_name": "Yonezu Kenshi",
             "title": "Demo Only Yonezu",
             "date": "2020/07/02",
             "profile_image": "require('../assets/image/YonezuKenshi/Kenshi.jpg')",
             "banner" : [
-                "../assets/image/YonezuKenshi/bootleg_slyder.jpg",
-                "../assets/image/YonezuKenshi/HaiiroToAo_Slyder.jpg",
-                "../assets/image/YonezuKenshi/Lemon_Slyder2.jpg"
+                "assets/image/YonezuKenshi/bootleg_slyder.jpg",
+                "assets/image/YonezuKenshi/HaiiroToAo_Slyder.jpg",
+                "assets/image/YonezuKenshi/Lemon_Slyder2.jpg"
             ],
             "author" : "Sean"
         },
         {
-            "id": "2",
+            "id": 2,
             "artist_name": "Sirup",
             "title": "Demo Only Yonezu",
             "date": "2020/07/03",
