@@ -8,16 +8,27 @@
         :items="items"
         @change="onChange"
       >
+        <template slot="item" slot-scope="{ item }">
+            <div class="custom-item">
+            <div class="icon">
+                <md-icon :name="item.icon" />
+            </div>
+            <div class="text">
+                <span v-text="item.label"></span>
+            </div>
+            </div>
+        </template>
       </md-tab-bar>
   </div>
 </template>
 <script>
-import {TabBar, Toast} from 'mand-mobile'
+import {TabBar, Icon} from 'mand-mobile'
 
 export default {
     name: "Header",
     components: {
-    [TabBar.name]: TabBar,
+        [TabBar.name]: TabBar,
+        [Icon.name]: Icon,
     },
     data() {
     return {
@@ -26,11 +37,19 @@ export default {
         {
             name: 'Home',
             label: 'Home',
+            icon: 'home',
             path: '/'
+        },
+        {
+            name: 'Discography',
+            label: 'Album',
+            icon: 'rectangle',
+            path: '/discography'
         },
         {
             name: 'About',
             label: 'About',
+            icon: 'setting',
             path: '/about'
         }
         ],

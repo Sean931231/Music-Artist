@@ -1,0 +1,29 @@
+.back-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 10vw;
+    background-color: #ffffff;
+
+    .button-position {
+        position: absolute;
+        top: 2vw;
+        left: 2vw;
+        
+        .back-icon {
+            color: #2c3e50;
+            text-align: left;
+            font-size: 5vw;
+            display: inline-block;
+        }
+        
+        p {
+            color: #2c3e50;
+            font-size: 5vw;
+            display: inline-block;
+        }
+    }
+
+}

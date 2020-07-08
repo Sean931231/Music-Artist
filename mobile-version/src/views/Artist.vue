@@ -1,29 +1,27 @@
 <template>
     <div class="artist" >
+        <Back />
         <div class="title">
-            <img src="../assets/image/YonezuKenshi/342.gif" >
-            PROFILE
-            <img src="../assets/image/YonezuKenshi/342.gif" >
+            <!-- <img src="../assets/image/YonezuKenshi/342.gif" > -->
+                PROFILE
+            <!-- <img src="../assets/image/YonezuKenshi/342.gif" > -->
         </div>
-        <div class="divider"></div>
-        <div class="artist-intro">
-            <img :src="artists.profile_image">
-            <div class="divider"></div>
-            <P>
-                <span class="bold">Name: </span> {{ artists.artist_name }}
-            </P>
-            <P v-if="artists.born">
-                <span class="bold">Born: </span> {{ artists.born }}
-            </P>
-            <p v-if="artists.born">
-                <span class="bold">Height: </span> {{ artists.height }}
-            </p>
-            <p v-html="artists.intro"></p>
+        <div class="divider">
         </div>
-        <div class="divider"></div>
+
+        <img class="artist-avatar" :src="artists.profile_image">
+        <div class="divider">
+        </div>
+
+        <div class="artist-info" v-for="(info, name) in artists.info" :key="info.key">
+            <md-detail-item :title="name" :content="info" />
+        </div>
+        <div class="divider">
+        </div>
+
         <div class="swiper-position" v-if="artists.banner">
             <md-swiper
-                :autoplay="5000"
+                :autoplay="3000"
                 transition="fade"
                 ref="swiper">
                 <md-swiper-item v-for="image in artists.banner" :key="image">
@@ -31,24 +29,46 @@
                 </md-swiper-item>
             </md-swiper>
         </div>
-        <div class="divider"></div>
-        <div class="title">
-            <img src="../assets/image/YonezuKenshi/342.gif" >
-            PROFILE
-            <img src="../assets/image/YonezuKenshi/342.gif" >
+        <div class="divider">
+        </div>
+
+        <p class="artist-intro" v-html="artists.intro"></p>
+        <div class="divider">
+        </div>
+
+        <div class="artist-social">
+            <!-- <md-detail-item :title="name" v-for="(social, name) in artists.social" :key="social.key">
+                <img src="../assets/image/social/youtube.png" class="holder" slot="left">
+                <a :href="social" style="color:#5878B4; text-decoration:none;"> {{ name }} </a>
+            </md-detail-item> -->
+
+            <div class="grid-container" v-for="social in artists.social" :key="social.key">
+                    <a href="google.com">
+                        <img src="../assets/image/social/youtube.png" >
+                    </a>
+                <!-- <div class="grid-item">
+                    <img src="../assets/image/social/twitter.png" >
+                </div>
+                <div class="grid-item">
+                    <img src="../assets/image/social/instagram.png" >
+                </div> -->
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import axios from 'axios';
-import {Swiper, SwiperItem} from 'mand-mobile';
+import {Swiper, SwiperItem, DetailItem} from 'mand-mobile';
+import Back from "@/components/BackButton.vue";
 
 export default {
     name: 'artist',
     components: {
+        Back,
         [Swiper.name]: Swiper,
-        [SwiperItem.name]: SwiperItem
+        [SwiperItem.name]: SwiperItem,
+        [DetailItem.name]: DetailItem
     },
     data() {
         return {
@@ -68,23 +88,15 @@ export default {
         },
 
         getData(id) {
-            axios.get("/json/demo.json", {
+            axios.get("/json/artist_info.json", {
                 }).then(response => {
                     if(response.status) {
                         this.artists = response.data.data.find(result => result.id == id);
                         // console.log(this.artists);
+                        console.log(this.artists.social.youtube);
                     }
                 })
-        },
-        
-        beforeChange(from, to) {
-            this.setValue('#valueSwiper0', from)
-            this.setValue('#valueSwiper1', to)
-        },
-        afterChange(from, to) {
-            this.setValue('#valueSwiper2', from)
-            this.setValue('#valueSwiper3', to)
-        },
+        },        
     },
 
     watch: {},
