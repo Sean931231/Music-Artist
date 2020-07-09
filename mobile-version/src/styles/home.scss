@@ -3,40 +3,28 @@
     
     .title-position {
         position: relative;
-        // background-color: green;
         margin-bottom: 4vw;
     }
 
     .content-position {
         position: relative;
+        padding: 0vw 2vw;
 
         .md-skeleton {
             margin: 4vw 0;
         }
 
-        // .skeleton-switch {
-        //     margin-bottom: 4vw;
+        .skeleton-item {
+            // height: 23vw;
+            // background-color: black;
 
-        //     .skeleton-item {
-        //         &:last-child {
-        //             margin-bottom: 0;
-        //             margin-bottom: 24px;
-        //         }
-
-        //         .md-cell-item {
-        //             &.skeleton-item {
-        //                 margin-bottom: 0;
-        //             }
-
-        //         }
-        //     }
-        // }
             .holder {
                 display: block;
                 width: 11vw;
-                height: 10.5vw;
+                height: 11vw;
                 border-radius: 50%;
-                background-color: #ccc;
+                background-color: #fff;
             }
+        }
     }
 }

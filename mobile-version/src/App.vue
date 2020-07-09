@@ -28,7 +28,6 @@
   /* color: #1E1E1E; */
 }
 .content {
-  padding: 4vw;
   padding-bottom: 20vw;
 }
 </style>

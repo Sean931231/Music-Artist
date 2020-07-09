@@ -36,19 +36,19 @@ export default {
         items: [
         {
             name: 'Home',
-            label: 'Home',
+            label: 'HOME',
             icon: 'home',
             path: '/'
         },
         {
             name: 'Discography',
-            label: 'Album',
+            label: 'ALBUM',
             icon: 'rectangle',
             path: '/discography'
         },
         {
             name: 'About',
-            label: 'About',
+            label: 'ABOUT',
             icon: 'setting',
             path: '/about'
         }

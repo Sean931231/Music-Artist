@@ -3,6 +3,10 @@
     <div class="title-position">
       <Title />
     </div>
+    
+    <div class="horizon-image">
+      <img src="" >
+    </div>
 
     <div class="content-position">
       <div class="loading-content">
