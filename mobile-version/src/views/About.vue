@@ -1,5 +1,19 @@
 <template>
   <div class="about">
+    <div class="horizon-image">
+      <img src="../assets/image/horizonline/Monster_scroll_L1.png" class="layer3">
+      <img src="../assets/image/horizonline/Monster_scroll_L2.png" class="layer4">
+    </div>
+
+    <!-- <div class="title-position">
+      <Title />
+    </div> -->
+    
+    <div class="horizon-image">
+      <img src="../assets/image/horizonline/Monster_scroll_L1.png" class="layer1">
+      <img src="../assets/image/horizonline/Monster_scroll_L2.png" class="layer2">
+    </div>
+
     <div class="swiper-position">
       <md-swiper
         :autoplay="5000"

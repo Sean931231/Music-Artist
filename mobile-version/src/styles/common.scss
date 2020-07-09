@@ -10,3 +10,39 @@
     border-top: 1px solid #ecf8f6;
     border-left: 0px;
 }
+
+.horizon-image {
+    position: relative;
+    width: 100vw;
+    height: 30vw;
+    overflow: hidden;
+    // background-color: black;
+    
+    .layer1 {
+        position: absolute;
+        top: 5vw;
+        width: 100vw;
+        transform: scale(2);
+    }
+    
+    .layer2 {
+        position: absolute;
+        top: 11.5vw;
+        width: 100vw;
+        transform: scale(2);
+    }
+
+    .layer3 {
+        position: absolute;
+        top: 10vw;
+        width: 100vw;
+        transform: scale(2) rotate(180deg);
+    }
+
+    .layer4 {
+        position: absolute;
+        top: 5vw;
+        width: 100vw;
+        transform: scale(2) rotate(180deg);
+    }
+}

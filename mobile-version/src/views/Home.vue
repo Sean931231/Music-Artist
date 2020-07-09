@@ -3,10 +3,6 @@
     <div class="title-position">
       <Title />
     </div>
-    
-    <div class="horizon-image">
-      <img src="" >
-    </div>
 
     <div class="content-position">
       <div class="loading-content">
@@ -56,6 +52,54 @@ export default {
         },
         { 
           id: 2,
+          img: require('../assets/image/Sirup/avatar.jpg'),
+          ename: 'Sirup',
+          cname: ''
+        },
+        { 
+          id: 3,
+          img: require('../assets/image/Sirup/avatar.jpg'),
+          ename: 'Sirup',
+          cname: ''
+        },
+        { 
+          id: 4,
+          img: require('../assets/image/Sirup/avatar.jpg'),
+          ename: 'Sirup',
+          cname: ''
+        },
+        { 
+          id: 5,
+          img: require('../assets/image/Sirup/avatar.jpg'),
+          ename: 'Sirup',
+          cname: ''
+        },
+        { 
+          id: 6,
+          img: require('../assets/image/Sirup/avatar.jpg'),
+          ename: 'Sirup',
+          cname: ''
+        },
+        { 
+          id: 7,
+          img: require('../assets/image/Sirup/avatar.jpg'),
+          ename: 'Sirup',
+          cname: ''
+        },
+        { 
+          id: 8,
+          img: require('../assets/image/Sirup/avatar.jpg'),
+          ename: 'Sirup',
+          cname: ''
+        },
+        { 
+          id: 9,
+          img: require('../assets/image/Sirup/avatar.jpg'),
+          ename: 'Sirup',
+          cname: ''
+        },
+        { 
+          id: 10,
           img: require('../assets/image/Sirup/avatar.jpg'),
           ename: 'Sirup',
           cname: ''

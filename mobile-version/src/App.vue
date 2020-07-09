@@ -29,5 +29,6 @@
 }
 .content {
   padding-bottom: 20vw;
+  letter-spacing: 0.1vw;
 }
 </style>
