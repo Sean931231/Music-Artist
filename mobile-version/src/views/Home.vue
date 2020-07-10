@@ -31,8 +31,8 @@
 </template>
 
 <script>
-import DarkTitle from "@/components/DarkTitle.vue";
-import {Skeleton, Field, CellItem} from 'mand-mobile'
+import {Skeleton, Field, CellItem} from 'mand-mobile';
+import DarkTitle from '@/components/DarkTitle.vue';
 
 export default {
   name: "home",
@@ -85,7 +85,7 @@ export default {
           id: artist.id,
         }
       });
-    }
+    },
   },
   
 };

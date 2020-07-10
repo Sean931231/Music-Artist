@@ -5,8 +5,8 @@
       <img src="../assets/image/horizonline/Monster_scroll_L2.png" class="layer4">
     </div>
 
-    <div class="title-position">
-      <Title />
+    <div class="logo-position">
+      <DarkTitle />
     </div>
     
     <div class="horizon-image">
@@ -34,13 +34,13 @@ import {Swiper, SwiperItem} from 'mand-mobile';
 
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-import Title from "@/components/Title.vue";
+import DarkTitle from '@/components/DarkTitle.vue';
 
 export default {
   name: "about",
   components: {
+    DarkTitle,
     HelloWorld,
-    Title,
     [Swiper.name]: Swiper,
     [SwiperItem.name]: SwiperItem
   },
