@@ -1,8 +1,19 @@
+@import "common.scss";
+
 .about {
+    position: relative;
     color: grey;
+
+    .title-position {
+        position: relative;
+        margin: 0 auto;
+        width: 90vw;
+    }
 
     .swiper-position {
         position: relative;
+        margin: 0 auto;
+        top: 5vw;
         width: 92vw;
         height: 44vw;
         // background-color: black;
@@ -15,5 +26,9 @@
             height: 44vw;
             border-radius: 3vw;
         }
+    }
+
+    .md-button.primary::after {
+        z-index: 0;
     }
 }

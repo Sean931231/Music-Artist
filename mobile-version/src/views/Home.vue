@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     <div class="title-position">
-      <Title />
+      <DarkTitle />
+    </div>
+
+    <div class="horizon-image">
+      <img src="../assets/image/horizonline/Monster_scroll_L1.png" class="layer1">
+      <img src="../assets/image/horizonline/Monster_scroll_L2.png" class="layer2">
     </div>
 
     <div class="content-position">
@@ -26,14 +31,14 @@
 </template>
 
 <script>
-import Title from "@/components/Title.vue";
+import DarkTitle from "@/components/DarkTitle.vue";
 import {Skeleton, Field, CellItem} from 'mand-mobile'
 
 export default {
   name: "home",
 
   components: {
-    Title,
+    DarkTitle,
     [Skeleton.name]: Skeleton,
     [Field.name]: Field,
     [CellItem.name]: CellItem,
@@ -56,54 +61,6 @@ export default {
           ename: 'Sirup',
           cname: ''
         },
-        { 
-          id: 3,
-          img: require('../assets/image/Sirup/avatar.jpg'),
-          ename: 'Sirup',
-          cname: ''
-        },
-        { 
-          id: 4,
-          img: require('../assets/image/Sirup/avatar.jpg'),
-          ename: 'Sirup',
-          cname: ''
-        },
-        { 
-          id: 5,
-          img: require('../assets/image/Sirup/avatar.jpg'),
-          ename: 'Sirup',
-          cname: ''
-        },
-        { 
-          id: 6,
-          img: require('../assets/image/Sirup/avatar.jpg'),
-          ename: 'Sirup',
-          cname: ''
-        },
-        { 
-          id: 7,
-          img: require('../assets/image/Sirup/avatar.jpg'),
-          ename: 'Sirup',
-          cname: ''
-        },
-        { 
-          id: 8,
-          img: require('../assets/image/Sirup/avatar.jpg'),
-          ename: 'Sirup',
-          cname: ''
-        },
-        { 
-          id: 9,
-          img: require('../assets/image/Sirup/avatar.jpg'),
-          ename: 'Sirup',
-          cname: ''
-        },
-        { 
-          id: 10,
-          img: require('../assets/image/Sirup/avatar.jpg'),
-          ename: 'Sirup',
-          cname: ''
-        }
       ],
     }
   },

@@ -14,7 +14,7 @@
 .horizon-image {
     position: relative;
     width: 100vw;
-    height: 30vw;
+    height: 20vw;
     overflow: hidden;
     // background-color: black;
     
@@ -34,14 +34,14 @@
 
     .layer3 {
         position: absolute;
-        top: 10vw;
+        top: 7vw;
         width: 100vw;
         transform: scale(2) rotate(180deg);
     }
 
     .layer4 {
         position: absolute;
-        top: 5vw;
+        top: 0vw;
         width: 100vw;
         transform: scale(2) rotate(180deg);
     }
