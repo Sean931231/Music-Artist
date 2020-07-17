@@ -9,7 +9,6 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home,
-    props: true
   },
   {
     path: '/about',
@@ -19,14 +18,12 @@ Vue.use(VueRouter)
   {
     path: '/artist',
     name: 'Artist',
-    component: () => import(/* webpackChunkName: "artist" */ '../views/Artist.vue'),
-    props: true
+    component: () => import(/* webpackChunkName: "artist" */ '../views/Artist.vue')
   },
   {
     path: '/discography',
     name: 'Discography',
-    component: () => import(/* webpackChunkName: "discography" */'../views/Discography.vue'),
-    props: true
+    component: () => import(/* webpackChunkName: "discography" */'../views/Discography.vue')
   }
 ]
 
