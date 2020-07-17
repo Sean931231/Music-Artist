@@ -8,30 +8,28 @@
 </template>
 
 <script>
+import axios from 'axios';
 import Back from '@/components/BackButton.vue'
 
 export default {
   name: 'Discography',
   data() {
     return {
-
     }
   },
   components: {
     Back,
+
   },
   mounted () {
-    this.checkProp();
   },
   methods: {
-    checkProp() {
 
-    }
   },
 
 }
 </script>
 
 <style lang="scss">
-
+ @import '../styles/discography.scss';
 </style>

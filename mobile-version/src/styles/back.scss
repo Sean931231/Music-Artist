@@ -1,48 +1,44 @@
 .back-button {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
   margin: 0 auto;
   width: 100vw;
   height: 10vw;
-  background-color: #ffffff;
+  background-color: #fff;
   z-index: 100;
 
   .button-position {
     position: absolute;
     top: 2vw;
     left: 2vw;
-    display: inline-block;
+    line-height: 0;
 
     .back-icon {
-      color: #2c3e50;
-      text-align: left;
       font-size: 4vw;
+      color: #2c3e50;
       display: inline-block;
     }
 
     p {
-      color: #2c3e50;
       font-size: 4vw;
+      color: #2c3e50;
       display: inline-block;
     }
   }
 
   .page-title {
-    position: absolute;
+    position: relative;
     top: 2vw;
     left: 0;
     right: 0;
     margin: 0 auto;
     width: 50vw;
 
-      p {
-        font-size: 5vw;
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        color: #2c3e50;
-        display: inline-block;
-      }
+    p {
+      font-size: 5vw;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      color: #2c3e50;
+    }
   }
 
 }
