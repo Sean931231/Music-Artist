@@ -1,5 +1,5 @@
 .back-button {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -7,27 +7,28 @@
     width: 100vw;
     height: 10vw;
     background-color: #ffffff;
+    z-index: 100;
 
     .button-position {
         position: absolute;
         top: 2vw;
         left: 2vw;
         display: inline-block;
-        
+
         .back-icon {
             color: #2c3e50;
             text-align: left;
             font-size: 4vw;
             display: inline-block;
         }
-        
+
         p {
             color: #2c3e50;
             font-size: 4vw;
             display: inline-block;
         }
     }
-    
+
     .page-title {
         position: absolute;
         top: 2vw;
@@ -35,7 +36,7 @@
         right: 0;
         margin: 0 auto;
         width: 50vw;
-        
+
         p {
             font-size: 5vw;
             font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;

@@ -20,7 +20,7 @@
         // background-color: black;
         border-radius: 3vw;
         box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-        
+
         .banner-item {
             position: relative;
             width: 92vw;
@@ -31,5 +31,17 @@
 
     .md-button.primary::after {
         z-index: 0;
+    }
+
+    .test-props {
+      position: relative;
+      width: 80vw;
+      margin: 0 auto;
+
+      .md-button {
+        background: linear-gradient(to Right, #ccc, #fff);
+        color: #bb6868;
+        margin-bottom: 3vw;
+      }
     }
 }

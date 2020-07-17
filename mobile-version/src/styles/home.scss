@@ -1,36 +1,43 @@
 @import "common.scss";
 
 .home {
+  position: relative;
+
+  .title-position {
     position: relative;
-    
-    .title-position {
-        position: relative;
-        width: 90vw;
-        margin: 0 auto;
-        margin-top: 4vw;
-        background-color: #000;
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 4vw;
+    background-color: #000;
+  }
+
+  .content-position {
+    position: relative;
+    margin-top: 6vw;
+    padding: 0vw 5vw;
+
+    .md-skeleton {
+      margin: 4vw 0;
     }
-    
-    .content-position {
-        position: relative;
-        margin-top: 6vw;
-        padding: 0vw 5vw;
 
-        .md-skeleton {
-            margin: 4vw 0;
-        }
+    .skeleton-item {
+      // height: 23vw;
+      // background-color: black;
 
-        .skeleton-item {
-            // height: 23vw;
-            // background-color: black;
-
-            .holder {
-                display: block;
-                width: 11vw;
-                height: 11vw;
-                border-radius: 50%;
-                background-color: #fff;
-            }
-        }
+      .holder {
+        display: block;
+        width: 11vw;
+        height: 11vw;
+        border-radius: 50%;
+        background-color: #fff;
+      }
     }
+  }
+
+  .test-props {
+    position: relative;
+    width: 80vw;
+    top: 10vw;
+    margin: 0 auto;
+  }
 }

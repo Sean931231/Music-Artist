@@ -31,7 +31,8 @@
 </template>
 
 <script>
-import {Skeleton, Field, CellItem} from 'mand-mobile';
+import axios from 'axios';
+import {Skeleton, CellItem, Button} from 'mand-mobile';
 import DarkTitle from '@/components/DarkTitle.vue';
 
 export default {
@@ -40,34 +41,21 @@ export default {
   components: {
     DarkTitle,
     [Skeleton.name]: Skeleton,
-    [Field.name]: Field,
     [CellItem.name]: CellItem,
+    "md-button": Button,
   },
 
   data() {
     return {
       loading: true,
-
-      artists: [
-        { 
-          id: 1,
-          img: require('../assets/image/YonezuKenshi/Kenshi.jpg'),
-          ename: 'Yonezu Kenshi',
-          cname: '米津玄師'
-        },
-        { 
-          id: 2,
-          img: require('../assets/image/Sirup/avatar.jpg'),
-          ename: 'Sirup',
-          cname: ''
-        },
-      ],
+      artists: [],
     }
   },
-  
+
   mounted() {
     window.startLoading = this.startLoading
-    this.startLoading()
+    this.startLoading();
+    this.init();
   },
 
   methods: {
@@ -78,19 +66,25 @@ export default {
       }, 100)
     },
 
+    init() {
+      axios.get("/json/artist.json", {
+        }).then(response => {
+          if(response.status) {
+            this.artists = response.data.artist;
+          }
+        })
+    },
+
     next(artist) {
       this.$router.push({
         name: 'Artist',
-        props: {
-          cname: artist.cname
-        },
         query: {
           id: artist.id,
         }
       });
     },
   },
-  
+
 };
 </script>
 

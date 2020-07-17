@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "artist" : [
+    {
+      "id" : 1,
+      "img": "assets/image/YonezuKenshi/avatar.jpg",
+      "ename": "Yonezu Kenshi",
+      "cname": "米津玄師"
+    },
+    {
+      "id" : 2,
+      "img": "assets/image/Sirup/avatar.jpg",
+      "ename": "Sirup",
+      "cname": "シラップ"
+    }
+  ]
+}

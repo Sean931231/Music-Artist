@@ -1,13 +1,13 @@
 {
-    "status": "success",
-    "data": [
-        {
-            "id" : 1,
-            "artist_name" : "Yonezu Kenshi"
-        },
-        {
-            "id" : 2,
-            "artist_name" : "Sirup"
-        }
-    ]
+  "status": "success",
+  "data": [
+    {
+      "id" : 1,
+      "artist_name" : "Yonezu Kenshi"
+    },
+    {
+      "id" : 2,
+      "artist_name" : "Sirup"
+    }
+  ]
 }
