@@ -3,91 +3,90 @@
 @import 'common.scss';
 
 .artist {
+  position: relative;
+  padding-top: 10vw;
+  color: #2c3e50;
+  font-size: 5vw;
+
+  .artist-swiper {
     position: relative;
-    padding-top: 10vw;
-    color: #2c3e50;
-    font-size: 5vw;
+    padding-bottom: 20vw;
+    background-color: #eeedf6;
 
-    .artist-swiper {
+    .swiper-position {
+      position: relative;
+      width: 100vw;
+      height: 50vw;
+
+      .banner-item {
         position: relative;
-        padding-bottom: 20vw;
-        background-color: #eeedf6;
-
-        .swiper-position {
-            position: relative;
-            width: 100vw;
-            height: 50vw;
-            
-            .banner-item {
-                position: relative;
-                width: 100vw;
-                height: 50vw;
-            }
-        }
+        width: 100vw;
+        height: 50vw;
+      }
     }
+  }
 
-    .artist-avatar {
-        position: absolute;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        top: 40vw;
-        width: 38vw;
-        height: 38vw;
-        border-radius: 50%;
-        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-        z-index: 10;
-    }
+  .artist-avatar {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40vw;
+    width: 38vw;
+    height: 38vw;
+    border-radius: 50%;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    z-index: 10;
+  }
 
-    .info-position {
-        position: relative;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        padding: 0vw 5vw;
-        background-image: linear-gradient( #eeedf6, #ffffff);
+  .info-position {
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 0vw 5vw;
+    background-image: linear-gradient( #eeedf6, #ffffff);
 
-        .md-detail-item {
-            font-size: 4vw;
-            padding-bottom: 3.5vw;
-
-            .md-detail-title {
-                color: #bbbbbb;
-                font-weight: bold;
-            }
-        }
-    }
-    
-    .artist-intro {
-        position: relative;
-        padding: 0vw 5vw;
+      .md-detail-item {
         font-size: 4vw;
-        text-align: center;
-        line-height: 1.7;
-        letter-spacing: 0.15vw;
-        // font-family: 'Rokkitt', serif;
+        padding-bottom: 3.5vw;
 
-        &::before {
-            border: 10px solid #000;
+        .md-detail-title {
+          color: #bbbbbb;
+          font-weight: bold;
         }
-    }
+      }
+  }
 
-    .artist-social {
-        position: relative;
-        width: 90vw;
-        margin: 0 auto;
-        text-align: center;
-        padding: 0vw 5vw;
-        
-        .social-container {
-            display: inline-block;
-            padding: 0vw 5vw;
-            
-            img {
-                width: 10vw;
-                border-radius: 2.3vw;
-            }
-        }
-    }
+  .artist-intro {
+    position: relative;
+    padding: 0vw 5vw;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 1.7;
+    letter-spacing: 0.15vw;
+    // font-family: 'Rokkitt', serif;
 
+    &::before {
+      border: 10px solid #000;
+    }
+  }
+
+  .artist-social {
+    position: relative;
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0vw 5vw;
+
+    .social-container {
+      display: inline-block;
+      padding: 0vw 5vw;
+
+      img {
+        width: 10vw;
+        border-radius: 2.3vw;
+      }
+    }
+  }
 }

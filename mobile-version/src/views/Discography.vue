@@ -1,5 +1,6 @@
 <template>
   <div class="discography">
+    <Back />
     <div class="discography-title">
       <p>{{ this.$route.name }} </p>
     </div>
@@ -7,23 +8,28 @@
 </template>
 
 <script>
-  export default {
-    name: 'Discography',
-    data() {
-      return {
+import Back from '@/components/BackButton.vue'
 
-      }
-    },
-    mounted () {
-      this.checkProp();
-    },
-    methods: {
-      checkProp() {
+export default {
+  name: 'Discography',
+  data() {
+    return {
 
-      }
-    },
+    }
+  },
+  components: {
+    Back,
+  },
+  mounted () {
+    this.checkProp();
+  },
+  methods: {
+    checkProp() {
 
-  }
+    }
+  },
+
+}
 </script>
 
 <style lang="scss">
