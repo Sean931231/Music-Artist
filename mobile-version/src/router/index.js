@@ -8,7 +8,8 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    props: true
   },
   {
     path: '/about',
@@ -25,6 +26,7 @@ Vue.use(VueRouter)
     path: '/discography',
     name: 'Discography',
     component: () => import(/* webpackChunkName: "discography" */'../views/Discography.vue'),
+    props: true
   }
 ]
 

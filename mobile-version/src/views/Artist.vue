@@ -58,6 +58,12 @@ export default {
         }
     },
 
+    props: {
+        cname: {
+            type: String,
+        },
+    },
+
     mounted() {
         this.init();
     },

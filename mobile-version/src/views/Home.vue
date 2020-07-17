@@ -81,6 +81,9 @@ export default {
     next(artist) {
       this.$router.push({
         name: 'Artist',
+        props: {
+          cname: artist.cname
+        },
         query: {
           id: artist.id,
         }

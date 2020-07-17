@@ -1,5 +1,7 @@
+$primary: 5vw;
+
 p{
-    font-size: 5vw;
+    font-size: $primary;
 }
 
 .divider {
