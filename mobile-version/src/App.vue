@@ -20,15 +20,15 @@
 <style scoped lang="scss">
 #app {
   position: relative;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   /* color: #2c3e50; */
   /* color: #1E1E1E; */
-}
-.content {
-  padding-bottom: 20vw;
-  letter-spacing: 0.1vw;
+
+  .content {
+    padding-bottom: 20vw;
+    letter-spacing: 0.1vw;
+  }
 }
 </style>

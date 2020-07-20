@@ -2,5 +2,30 @@
 
 .discography {
   position: relative;
-  padding-top: 10vw;
+  padding-top: 3vw;
+
+  .discography-title {
+    position: relative;
+
+    p{
+      color: $font-color;
+      font-family: $serif-font;
+    }
+  }
+
+  .navbar-position {
+    position: relative;
+    padding-top: 3vw;
+
+    .md-tab-bar {
+      background-color: $primary-color;
+      box-shadow: $shadow;
+
+      .md-tab-bar-item {
+        &.is-active {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
 }

@@ -1,16 +1,27 @@
-$primary: 5vw;
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+$primary-color: #fff;
+$font-color: #2c3e50;
+$secondary-color: #964c3c;
+$font-size: 5vw;
+$font-family: "Avenir", Helvetica, Arial, sans-serif;
+$serif-font: 'Indie Flower';
+$shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 
 p{
-  font-size: $primary;
+  font-size: $font-size;
+  font-family: $font-family;
 }
 
 .divider {
   padding: 2.5vw 0;
 }
+
 .bold {
   font-weight: bold;
   color: #000000;
 }
+
 .divider-line {
   width: 90vw;
   border-top: 1px solid #ecf8f6;

@@ -2,7 +2,9 @@
 
 .about {
     position: relative;
-    color: grey;
+    // color: grey;
+    color: $primary-color;
+    font-family: $serif-font;
 
     .logo-position {
         position: relative;
