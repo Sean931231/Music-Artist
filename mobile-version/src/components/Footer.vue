@@ -35,24 +35,24 @@ export default {
     return {
         current: "Home",
         items: [
-        {
-            name: 'Home',
-            label: 'HOME',
-            icon: 'home',
-            path: '/'
-        },
-        {
-            name: 'Discography',
-            label: 'ALBUM',
-            icon: 'rectangle',
-            path: '/discography'
-        },
-        {
-            name: 'About',
-            label: 'ABOUT',
-            icon: 'setting',
-            path: '/about'
-        }
+          {
+              name: 'Home',
+              label: 'HOME',
+              icon: 'home',
+              path: '/'
+          },
+          {
+              name: 'Discography',
+              label: 'ALBUM',
+              icon: 'rectangle',
+              path: '/discography'
+          },
+          {
+              name: 'About',
+              label: 'ABOUT',
+              icon: 'setting',
+              path: '/about'
+          }
         ],
         arrs: [1, 3, 5, 7, 9],
     }

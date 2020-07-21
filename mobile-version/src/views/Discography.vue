@@ -11,6 +11,7 @@
         :maxLength="5"
         @change="onTabChange"
       ></md-tab-bar>
+
       <md-swiper
         ref="swiper"
         :autoplay="0"
@@ -20,7 +21,9 @@
         @before-change="onSwiperChange"
       >
         <md-swiper-item v-for="album in albums" :key="album.key">
-          <p>{{ album.label }} </p>
+          <p>{{ album.artist_name }} </p>
+
+          <h3> {{ album.title }} </h3>
         </md-swiper-item>
       </md-swiper>
 
@@ -54,7 +57,6 @@ export default {
 
   mounted () {
     this.artistInit();
-    this.tablist();
   },
 
   methods: {
@@ -62,9 +64,8 @@ export default {
       axios.get("/json/artist.json", {
       }).then(response => {
         if(response.status) {
-          console.log(response.data.artist)
           this.items = response.data.artist;
-          this.albums = this.items;
+          this.tablist();
         }
       })
     },
@@ -73,17 +74,17 @@ export default {
       axios.get("/json/album.json", {
       }).then(response => {
         if(response.status) {
-
+          this.albums = response.data.result;
         }
       })
     },
 
-    onSwiperChange(from, to) {
-      this.current = to;
-    },
-
     onTabChange(item, index) {
       this.$refs.swiper.goto(index);
+    },
+
+    onSwiperChange(from, to) {
+      this.current = to;
     },
   },
 }

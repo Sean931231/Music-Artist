@@ -1,13 +1,34 @@
 {
   "status": "success",
-  "album": [
+  "result": [
     {
       "id" : 1,
-      "artist_name" : "Yonezu Kenshi"
+      "artist_name" : "Yonezu Kenshi 米津玄師",
+      "album" : [
+        {
+          "id": 1,
+          "title": "1st Single Album",
+          "album_image" : "assets/image/",
+          "release_date" : "2013 5.29発売",
+          "playlist": [
+            {
+              "brief": "サンタマリア",
+              "url" : "https://www.youtube.com/watch?v=KR54fHpcxEQ"
+            },
+            {
+              "brief": "百鬼夜行",
+              "url": null
+            },
+            {
+              "brief": "笛吹けども踊らず"
+            }
+          ]
+        }
+      ]
     },
     {
       "id" : 2,
-      "artist_name" : "Sirup"
+      "artist_name" : "Sirup シラップ"
     },
     {
       "id" : 3
