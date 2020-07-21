@@ -21,7 +21,7 @@
           class="skeleton-item"
           v-for="(artist, index) in artists"
           :key="index">
-            <md-cell-item :title="artist.ename" :brief="artist.cname" addon="Profile" arrow @click="next(artist)">
+            <md-cell-item :title="artist.ename" :brief="artist.cname" addon="Profile" arrow @click="next(artist.id)">
               <img :src="artist.img" class="holder" slot="left">
             </md-cell-item>
         </md-skeleton>
@@ -32,7 +32,7 @@
 
 <script>
 import axios from 'axios';
-import {Skeleton, CellItem, Button} from 'mand-mobile';
+import {Skeleton, CellItem, Button, Toast} from 'mand-mobile';
 import DarkTitle from '@/components/DarkTitle.vue';
 
 export default {
@@ -49,6 +49,7 @@ export default {
     return {
       loading: true,
       artists: [],
+      artistArray: []
     }
   },
 
@@ -75,13 +76,25 @@ export default {
         })
     },
 
-    next(artist) {
-      this.$router.push({
-        name: 'Artist',
-        query: {
-          id: artist.id,
+    next(id) {
+      axios.get("/json/artist_info.json", {
+      }).then(response => {
+        if(response.status) {
+          let artistId = response.data.artist_info;
+          let findId = artistId.find(element => element.id == id);
+
+          if( findId ) {
+            this.$router.push({
+              name: 'Artist',
+              query: {
+                id: id,
+              }
+            });
+          } else {
+            Toast.failed('Not Yet Ready');
+          }
         }
-      });
+      })
     },
   },
 

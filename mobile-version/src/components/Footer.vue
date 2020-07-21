@@ -6,6 +6,7 @@
       <md-tab-bar
         v-model="current"
         :items="items"
+        :hasInk="false"
         @change="onChange"
       >
         <template slot="item" slot-scope="{ item }">

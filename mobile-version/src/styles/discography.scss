@@ -9,7 +9,8 @@
 
     p{
       color: $font-color;
-      font-family: $serif-font;
+      font-family: $font-family;
+      letter-spacing: 0.5vw;
     }
   }
 
@@ -25,6 +26,22 @@
         &.is-active {
           color: $secondary-color;
         }
+
+      }
+      .md-tab-bar-ink {
+        background-color: $secondary-color;
+      }
+    }
+
+    .md-swiper {
+      position: relative;
+
+      .md-swiper-item {
+        padding: 3vw;
+        box-sizing: border-box;
+        line-height: 1.5;
+        letter-spacing: 1vw;
+        font-size: $font-size;
       }
     }
   }
