@@ -20,10 +20,10 @@
         :has-dots="false"
         @before-change="onSwiperChange"
       >
-        <md-swiper-item v-for="album in albums" :key="album.key">
-          <p>{{ album.artist_name }} </p>
+        <md-swiper-item  v-for="item in items" :key="item.key">
+          <div class="album-content">
 
-          <h3> {{ album.title }} </h3>
+          </div>
         </md-swiper-item>
       </md-swiper>
 
@@ -36,7 +36,7 @@
 
 <script>
 import axios from 'axios';
-import {TabBar, Swiper, SwiperItem} from 'mand-mobile'
+import {TabBar, Swiper, SwiperItem, Toast} from 'mand-mobile'
 
 export default {
   name: 'Discography',
@@ -49,6 +49,7 @@ export default {
   data() {
     return {
       current: 0,
+      currentAlbum: 1,
       artistData: [],
       items: [],
       albums: [],
@@ -57,6 +58,7 @@ export default {
 
   mounted () {
     this.artistInit();
+    this.tablist(this.currentAlbum);
   },
 
   methods: {
@@ -65,26 +67,32 @@ export default {
       }).then(response => {
         if(response.status) {
           this.items = response.data.artist;
-          this.tablist();
         }
       })
     },
 
-    tablist() {
+    tablist(index) {
+      // console.log("api:"+index);
       axios.get("/json/album.json", {
-      }).then(response => {
-        if(response.status) {
-          this.albums = response.data.result;
+        }).then(response => {
+          if(response.status) {
+            this.albums = response.data.album_result.find(element => element.id == index);
+            if (this.albums == null ) {
+              Toast.failed('Not Yet Ready')
+            }
+            console.log(this.albums);
         }
       })
     },
 
     onTabChange(item, index) {
       this.$refs.swiper.goto(index);
+      this.tablist(index+1);
     },
 
     onSwiperChange(from, to) {
       this.current = to;
+      this.tablist(to+1);
     },
   },
 }
