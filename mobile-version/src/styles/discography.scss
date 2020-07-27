@@ -45,4 +45,72 @@
       }
     }
   }
+
+  .album-list {
+    position: relative;
+    text-align: center;
+
+    .album-info {
+      position: relative;
+      padding-bottom: 10vw;
+      // background-color: aqua;
+
+      .album-title {
+        padding-bottom: 1vw;
+      }
+
+      .album-image {
+        position: relative;
+        width: 70vw;
+        margin: 0 auto;
+
+        img {
+          width: 60vw;
+          padding: 1vw;
+          border: 0.6vw solid black;
+        }
+      }
+
+      .album-release {
+        width: 60vw;
+        margin: 0 auto;
+        padding-bottom: 3vw;
+
+        p {
+          border-bottom: 2px dotted black;
+        }
+      }
+
+      .album-brief {
+        width: 60vw;
+        margin: 0 auto;
+        text-align: left;
+
+        ol {
+          font-size: 4vw;
+
+          li {
+            list-style-type: decimal;
+
+            p {
+              width: 89%;
+              font-size: 4vw;
+              display: inline-block;
+            }
+            a {
+              width: 10%;
+              display: inline-block;
+              float: right;
+              vertical-align: middle;
+
+              img {
+                width: 6vw;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
 }

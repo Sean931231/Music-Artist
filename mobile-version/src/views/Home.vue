@@ -91,7 +91,11 @@ export default {
               }
             });
           } else {
-            Toast.failed('Not Yet Ready');
+            Toast({
+              icon: "fail",
+              content: 'Not Yet Ready',
+              duration: 900
+            });
           }
         }
       })
