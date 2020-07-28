@@ -1,4 +1,7 @@
+@import "common.scss";
+
 #JapText{
+    font-family: $serif-font;
     stroke: #fff;
     fill: #fff;
     stroke-dasharray: 1800;
@@ -25,7 +28,7 @@
     90% {
         fill: rgba(255, 255, 255, 0);
     }
-    
+
     100% {
         opacity: 10;
         fill: rgba(255, 255, 255, 1);

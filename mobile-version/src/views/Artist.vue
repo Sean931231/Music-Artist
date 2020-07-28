@@ -38,7 +38,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import {Swiper, SwiperItem, DetailItem} from 'mand-mobile';
 import Back from "@/components/BackButton.vue";
 
@@ -75,7 +74,7 @@ export default {
     },
 
     getData(id) {
-      axios.get("/json/artist_info.json", {
+      this.$api.get("/json/artist_info.json", {
         }).then(response => {
           if(response.status) {
             this.artists = response.data.artist_info.find(result => result.id == id);

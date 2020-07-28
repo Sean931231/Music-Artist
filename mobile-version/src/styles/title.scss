@@ -1,42 +1,45 @@
+@import "common.scss";
+
 svg {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    position: relative;
-    width: 90vw;
-    text-align: center;
-    // background: linear-gradient(to right, #000000, #434343);
+  // font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  position: relative;
+  width: 90vw;
+  text-align: center;
+  // background: linear-gradient(to right, #000000, #434343);
 }
 
 #JapText {
-    stroke: #000;
-    fill: #000;
-    stroke-dasharray: 1800;
-    opacity: 10;
-    animation-name: DrawLine;
-    animation-duration: 4s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  font-family: $serif-font;
+  stroke: #000;
+  fill: #000;
+  stroke-dasharray: 1800;
+  opacity: 10;
+  animation-name: DrawLine;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes DrawLine {
-    0% {
-        opacity: 0;
-        fill: none;
-        stroke-dashoffset: 1800;
-    }
+  0% {
+    opacity: 0;
+    fill: none;
+    stroke-dashoffset: 1800;
+  }
 
-    30% {
-        opacity: 10;
-        fill: none;
-        stroke-dashoffset: 1800;
-    }
+  30% {
+    opacity: 10;
+    fill: none;
+    stroke-dashoffset: 1800;
+  }
 
-    90% {
-        fill: rgba(0, 0, 0, 0);
-    }
-    
-    100% {
-        opacity: 10;
-        fill: rgba(0, 0, 0, 1);
-        stroke-dashoffset: 0;
-    }
+  90% {
+    fill: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    opacity: 10;
+    fill: rgba(0, 0, 0, 1);
+    stroke-dashoffset: 0;
+  }
 }

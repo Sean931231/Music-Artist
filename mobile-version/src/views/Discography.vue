@@ -8,8 +8,8 @@
       <md-tab-bar
         v-model="current"
         :items="items"
-        :maxLength="5"
         @change="onTabChange"
+        class="nav-bar"
       ></md-tab-bar>
 
       <md-swiper
@@ -60,7 +60,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import {TabBar, Swiper, SwiperItem, Toast} from 'mand-mobile'
 
 export default {
@@ -89,29 +88,32 @@ export default {
 
   methods: {
     artistInit() {
-      axios.get("/json/artist.json", {
-      }).then(response => {
-        if(response.status) {
-          this.items = response.data.artist;
-        }
-      })
+      this.$api
+          .get("/json/artist.json", {})
+          .then(response => {
+            if(response.status) {
+              this.items = response.data.artist;
+            }
+          })
+          .catch(error => console.log(error))
     },
 
     tablist(index, ename) {
       // console.log("api:"+ename);
-      axios.get("/json/album.json", {
-        }).then(response => {
-          if(response.status) {
-            this.albums = response.data.album_result.find(element => element.id == index);
-            if (this.albums == null ) {
-              Toast({
-                icon: "fail",
-                content: 'Not Yet Ready',
-                duration: 900
-              });
+      this.$api
+          .get("/json/album.json", {})
+          .then(response => {
+            if(response.status) {
+              this.albums = response.data.album_result.find(element => element.id == index);
+              if (this.albums == null ) {
+                Toast({
+                  icon: "fail",
+                  content: 'Not Yet Ready',
+                  duration: 900
+                });
+              }
             }
-        }
-      })
+          })
     },
 
     onTabChange(item, index) {

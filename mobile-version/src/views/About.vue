@@ -35,12 +35,11 @@
 </template>
 
 <script>
-import axios from 'axios';
 import {Swiper, SwiperItem, Button} from 'mand-mobile';
 
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-import DarkTitle from '@/components/DarkTitle.vue';
+import DarkTitle from '@/components/Title.vue';
 
 export default {
   name: "about",
@@ -89,7 +88,7 @@ export default {
     },
 
     init() {
-      axios.get("/json/artist.json", {
+      this.$api.get("/json/artist.json", {
         }).then(response => {
           if(response.status) {
             this.artists = response.data.artist;

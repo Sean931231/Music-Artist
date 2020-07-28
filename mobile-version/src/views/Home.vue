@@ -31,9 +31,8 @@
 </template>
 
 <script>
-import axios from 'axios';
 import {Skeleton, CellItem, Button, Toast} from 'mand-mobile';
-import DarkTitle from '@/components/DarkTitle.vue';
+import DarkTitle from '@/components/Title.vue';
 
 export default {
   name: "home",
@@ -68,36 +67,38 @@ export default {
     },
 
     init() {
-      axios.get("/json/artist.json", {
-        }).then(response => {
-          if(response.status) {
-            this.artists = response.data.artist;
-          }
+      this.$api
+          .get("/json/artist.json", {})
+          .then(response => {
+            if(response.status) {
+              this.artists = response.data.artist;
+            }
         })
     },
 
     next(id) {
-      axios.get("/json/artist_info.json", {
-      }).then(response => {
-        if(response.status) {
-          let artistId = response.data.artist_info;
-          let findId = artistId.find(element => element.id == id);
+       this.$api
+           .get("/json/artist_info.json", {})
+           .then(response => {
+              if(response.status) {
+                let artistId = response.data.artist_info;
+                let findId = artistId.find(element => element.id == id);
 
-          if( findId ) {
-            this.$router.push({
-              name: 'Artist',
-              query: {
-                id: id,
+                if( findId ) {
+                  this.$router.push({
+                    name: 'Artist',
+                    query: {
+                      id: id,
+                    }
+                  });
+                } else {
+                  Toast({
+                    icon: "fail",
+                    content: 'Not Yet Ready',
+                    duration: 900
+                  });
+                }
               }
-            });
-          } else {
-            Toast({
-              icon: "fail",
-              content: 'Not Yet Ready',
-              duration: 900
-            });
-          }
-        }
       })
     },
   },

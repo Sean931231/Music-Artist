@@ -7,32 +7,32 @@
     font-family: $serif-font;
 
     .logo-position {
-        position: relative;
-        margin: 0 auto;
-        width: 90vw;
-        background-color: #000;
+      position: relative;
+      margin: 0 auto;
+      width: 90vw;
+      // background-color: #000;
     }
 
     .swiper-position {
+      position: relative;
+      margin: 0 auto;
+      top: 5vw;
+      width: 92vw;
+      height: 44vw;
+      // background-color: black;
+      border-radius: 3vw;
+      box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+      .banner-item {
         position: relative;
-        margin: 0 auto;
-        top: 5vw;
         width: 92vw;
         height: 44vw;
-        // background-color: black;
         border-radius: 3vw;
-        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-
-        .banner-item {
-            position: relative;
-            width: 92vw;
-            height: 44vw;
-            border-radius: 3vw;
-        }
+      }
     }
 
     .md-button.primary::after {
-        z-index: 0;
+      z-index: 0;
     }
 
     .test-props {

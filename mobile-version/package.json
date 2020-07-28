@@ -9,6 +9,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
+    "firebase": "^7.17.1",
     "mand-mobile": "^2.5.1",
     "normalize.css": "^8.0.0",
     "vue": "^2.6.11",

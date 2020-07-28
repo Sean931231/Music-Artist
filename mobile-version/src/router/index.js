@@ -24,14 +24,13 @@ Vue.use(VueRouter)
     path: '/discography',
     name: 'Discography',
     component: () => import(/* webpackChunkName: "discography" */'../views/Discography.vue'),
-    props: true
   },
   {
     path: '/prop',
     name: 'Prop',
     component: () => import(/* webpackChunkName: "Prop" */'../views/Props.vue'),
     props: true
-  }
+  },
 ]
 
 const router = new VueRouter({
