@@ -67,38 +67,45 @@ export default {
     },
 
     init() {
+      // this.$api
+      //     .get("/json/artist.json", {})
+      //     .then(response => {
+      //       if(response.status) {
+      //         this.artists = response.data.artist;
+      //       }
+      //   })
       this.$api
-          .get("/json/artist.json", {})
+          .get("https://my-json-server.typicode.com/Sean931231/artistlist/artist", {})
           .then(response => {
             if(response.status) {
-              this.artists = response.data.artist;
+              this.artists = response.data;
             }
         })
     },
 
     next(id) {
-       this.$api
-           .get("/json/artist_info.json", {})
-           .then(response => {
-              if(response.status) {
-                let artistId = response.data.artist_info;
-                let findId = artistId.find(element => element.id == id);
+      this.$api
+          .get("/json/artist_info.json", {})
+          .then(response => {
+            if(response.status) {
+              let artistId = response.data.artist_info;
+              let findId = artistId.find(element => element.id == id);
 
-                if( findId ) {
-                  this.$router.push({
-                    name: 'Artist',
-                    query: {
-                      id: id,
-                    }
-                  });
-                } else {
-                  Toast({
-                    icon: "fail",
-                    content: 'Not Yet Ready',
-                    duration: 900
-                  });
-                }
+              if( findId ) {
+                this.$router.push({
+                  name: 'Artist',
+                  query: {
+                    id: id,
+                  }
+                });
+              } else {
+                Toast({
+                  icon: "fail",
+                  content: 'Not Yet Ready',
+                  duration: 900
+                });
               }
+            }
       })
     },
   },

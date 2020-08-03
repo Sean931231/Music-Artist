@@ -1,12 +1,34 @@
 <template>
   <div>
+    <input
+      v-model="query"
+      @blur="reset"
+      type="text"
+      class="SearchInput"
+      :placeholder="placeholder"
+    >
 
+    <transition-group name="fade" tag="ul" class="Results">
+      <li v-for="(item, index) in filtered" :key="index">
+        <span>
+          <strong>{{ item.title  }}</strong> - <small>{{ item.id  }}</small><br>
+          <small>{{ item.body  }}</small>
+        </span>
+      </li>
+    </transition-group>
+    <p v-show="isEmpty">Sorry, but we can't find any match for given term :( </p>
   </div>
 </template>
 
 <script>
   export default {
     name: 'Typeahead',
+    data() {
+      return {
+        items: [],
+        query: ''
+      }
+    },
 
     props: {
       source: {
@@ -30,14 +52,58 @@
       }
     },
 
+    mounted () {
+      this.fetchItems();
+    },
+
+    computed: {
+      filtered() {
+        if (this.query.length >= this.startAt) {
+          return this.items.filter(item => {
+            if (item.hasOwnProperty (this.filterKey)) {
+              return item[this.filterKey]
+                      .toLowerCase()
+                      .indexOf(this.query.toLowerCase()) > -1
+            } else {
+              console.error(` Seems like property you passed down ${this.filterKey} doesn't exist on object ! `)
+            }
+          })
+        }
+      },
+
+      isEmpty() {
+        if( typeof this.filtered === 'undefined' ) {
+          return false
+        } else {
+          return this.filtered.length < 1
+        }
+      }
+    },
+
+    methods: {
+      fetchItems() {
+        if ( typeof this.source === 'string' ) {
+          fetch(this.source)
+            .then(stream => stream.json())
+            .then(data => this.items = data)
+            .catch(error => console.error(error))
+        } else {
+          this.items = this.source
+        }
+      },
+
+      reset() {
+        this.query = ''
+      }
+    }
   }
 </script>
 
 <style lang="scss" scoped>
   .SearchInput {
     width: 100%;
-    padding: 1.5em 1em;
-    font-size: 1em;
+    padding: 5vw 4vw;
+    font-size: 5vw;
     outline: 0;
     border: 5px solid #41B883;
   }
@@ -50,7 +116,7 @@
   .Results li {
     background: rgba(53, 73, 94, 0.3);
     margin: 0;
-    padding: 1em;
+    padding: 5vw;
     list-style: none;
     width: 100%;
     border-bottom: 1px solid #394E62;

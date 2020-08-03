@@ -35,6 +35,31 @@
       z-index: 0;
     }
 
+    .Wrap {
+      position: relative;
+      width: 90vw;
+
+      h1, p {
+        font-size: 6vw;
+        color: #bb6868;
+      }
+
+      h1, h2, h3, h4 {
+        margin: 0;
+        padding: 0;
+        font-family: 'Lobster', Arial, sans-serif;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .Wrap {
+        max-width: 1vw;
+        margin: 1vh auto;
+      }
+    }
+
     .test-props {
       position: relative;
       width: 80vw;

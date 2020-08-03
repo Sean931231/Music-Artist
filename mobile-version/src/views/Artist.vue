@@ -59,12 +59,12 @@ export default {
 
   props: {
     cname: {
-        type: String,
+      type: String,
     },
   },
 
   mounted() {
-      this.init();
+    this.init();
   },
 
   methods: {
@@ -74,15 +74,15 @@ export default {
     },
 
     getData(id) {
-      this.$api.get("/json/artist_info.json", {
-        }).then(response => {
-          if(response.status) {
-            this.artists = response.data.artist_info.find(result => result.id == id);
-            this.social = this.artists.social;
-            console.log(response.data);
-          }
-        })
+      this.$api.get("https://my-json-server.typicode.com/Sean931231/artistlist/artist_info", {})
+          .then(response => {
+            if(response.status) {
+              this.artists = response.data.find(result => result.id == id);
+              this.social = this.artists.social;
+            }
+          })
     },
+
   },
 
   watch: {},

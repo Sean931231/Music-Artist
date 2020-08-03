@@ -27,86 +27,102 @@
 
     <HelloWorld msg="Welcome to Your Mand Mobile"/>
 
+    <div class="Wrap text-center">
+      <h1>Vue Typeahead</h1>
+      <p>Simple VueJS 2 TypeAhead component builded with Fetch Browser API.</p>
 
-    <div class="test-props" v-for="(artist, index) in artists" :key="index">
-      <md-button type="primary" @click="toProp(artist.cname)"> {{ artist.ename }} </md-button>
+      <!-- Our component-->
+      <typeahead
+        source="https://jsonplaceholder.typicode.com/posts"
+        placeholder="What TV Serie you are looking for..."
+        filter-key="title"
+        :start-at="2"
+      >
+      </typeahead>
     </div>
+
+
+    <!-- <div class="test-props" v-for="(artist, index) in artists" :key="index">
+      <md-button type="primary" @click="toProp(artist.cname)"> {{ artist.ename }} </md-button>
+    </div> -->
   </div>
 </template>
 
 <script>
-import {Swiper, SwiperItem, Button} from 'mand-mobile';
+  import {Swiper, SwiperItem, Button} from 'mand-mobile';
 
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-import DarkTitle from '@/components/Title.vue';
+  // @ is an alias to /src
+  import HelloWorld from "@/components/HelloWorld.vue";
+  import DarkTitle from '@/components/Title.vue';
+  import Typeahead from '@/components/Typeahead.vue'
 
-export default {
-  name: "about",
-  components: {
-    DarkTitle,
-    HelloWorld,
-    [Swiper.name]: Swiper,
-    [SwiperItem.name]: SwiperItem,
-    "md-button": Button
-  },
-  data() {
-    return {
-      images: [
-        {
-          img: require('../assets/image/YonezuKenshi/bootleg_slyder.jpg'),
-          alt: 'artist',
-          url: "/about"
-        },
-        {
-          img: require('../assets/image/YonezuKenshi/HaiiroToAo_Slyder.jpg'),
-          alt: 'artist',
-          url: "/artist"
-        },
-        {
-          img: require('../assets/image/YonezuKenshi/Lemon_Slyder2.jpg'),
-          alt: 'artist'
-        }
-      ],
-
-      artists: []
-    }
-  },
-
-  mounted () {
-    this.init();
-  },
-
-  methods: {
-    beforeChange(from, to) {
-      this.setValue('#valueSwiper0', from)
-      this.setValue('#valueSwiper1', to)
+  export default {
+    name: "about",
+    components: {
+      DarkTitle,
+      HelloWorld,
+      Typeahead,
+      [Swiper.name]: Swiper,
+      [SwiperItem.name]: SwiperItem,
+      "md-button": Button
     },
-    afterChange(from, to) {
-      this.setValue('#valueSwiper2', from)
-      this.setValue('#valueSwiper3', to)
+    data() {
+      return {
+        images: [
+          {
+            img: require('../assets/image/YonezuKenshi/bootleg_slyder.jpg'),
+            alt: 'artist',
+            url: "/about"
+          },
+          {
+            img: require('../assets/image/YonezuKenshi/HaiiroToAo_Slyder.jpg'),
+            alt: 'artist',
+            url: "/artist"
+          },
+          {
+            img: require('../assets/image/YonezuKenshi/Lemon_Slyder2.jpg'),
+            alt: 'artist'
+          }
+        ],
+
+        artists: []
+      }
     },
 
-    init() {
-      this.$api.get("/json/artist.json", {
-        }).then(response => {
-          if(response.status) {
-            this.artists = response.data.artist;
+    mounted () {
+      this.init();
+    },
+
+    methods: {
+      beforeChange(from, to) {
+        this.setValue('#valueSwiper0', from)
+        this.setValue('#valueSwiper1', to)
+      },
+      afterChange(from, to) {
+        this.setValue('#valueSwiper2', from)
+        this.setValue('#valueSwiper3', to)
+      },
+
+      init() {
+        this.$api.get("/json/artist.json", {
+          }).then(response => {
+            if(response.status) {
+              this.artists = response.data.artist;
+            }
+          })
+      },
+
+      toProp(cname) {
+        this.$router.push({
+          name: 'Prop',
+          params: {
+            obj: cname
           }
         })
+      }
+
     },
-
-    toProp(cname) {
-      this.$router.push({
-        name: 'Prop',
-        params: {
-          obj: cname
-        }
-      })
-    }
-
-  },
-};
+  };
 </script>
 
 <style lang="scss">
