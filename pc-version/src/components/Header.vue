@@ -20,20 +20,20 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-subheader class="mt-4 grey--text text--darken-1">SUBSCRIPTIONS</v-subheader>
+        <v-subheader class="mt-4 grey--text text--darken-1">ARTIST</v-subheader>
         <v-list>
           <v-list-item
-            v-for="item in items2"
-            :key="item.text"
+            v-for="artist in artistList"
+            :key="artist.key"
             link
           >
             <v-list-item-avatar>
               <img
-                :src="`https://randomuser.me/api/portraits/men/${item.picture}.jpg`"
+                :src="artist.img"
                 alt=""
               >
             </v-list-item-avatar>
-            <v-list-item-title v-text="item.text"></v-list-item-title>
+            <v-list-item-title v-text="artist.ename"></v-list-item-title>
           </v-list-item>
         </v-list>
         <v-list-item
@@ -51,6 +51,12 @@
           </v-list-item-action>
           <v-list-item-title class="grey--text text--darken-1">Manage Subscriptions</v-list-item-title>
         </v-list-item>
+        <v-list-item link @click="darkMode()">
+          <v-list-item-action>
+            <v-icon color="grey darken-1">mdi-brightness-3</v-icon>
+          </v-list-item-action>
+          <v-list-item-title class="grey--text text--darken-1">Mode</v-list-item-title>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
@@ -59,16 +65,16 @@
       clipped-left
       color="red"
       dense
-    >
+      >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-icon
         class="mx-4"
         large
       >
-        mdi-youtube
+        mdi-alpha-b-circle
       </v-icon>
       <v-toolbar-title class="mr-12 align-center">
-        <span class="title">Artist</span>
+        <span class="title">Page</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-row
@@ -99,14 +105,31 @@
         { icon: 'mdi-playlist-play', text: 'Playlists' },
         { icon: 'mdi-clock', text: 'Watch Later' },
       ],
-      items2: [
-        { picture: 28, text: 'Joseph' },
-        { picture: 38, text: 'Apple' },
-        { picture: 48, text: 'Xbox Ahoy' },
-        { picture: 58, text: 'Nokia' },
-        { picture: 1, text: 'MKBHD' },
-      ],
+      artistList: []
     }),
+
+    mounted () {
+      this.init();
+    },
+
+    methods: {
+      init() {
+        this.$http
+            .get("https://my-json-server.typicode.com/Sean931231/artistlist/artist")
+            .then((response) => {
+              // console.log(response.data)
+              this.artistList = response.data;
+              // this.artistList.forEach(element => {
+              //   let picture = element.img;
+              //   let text = element.ename;
+              // });
+            })
+      },
+
+      darkMode() {
+        this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      }
+    },
   }
 </script>
 

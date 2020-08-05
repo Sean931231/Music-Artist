@@ -7,7 +7,7 @@
           justify="center"
           align="center"
         >
-          <p> YOLO </p>
+          <router-view />
         </v-row>
       </v-container>
     </v-main>
@@ -21,10 +21,6 @@ export default {
     name: 'App',
     components: {
       Header,
-    },
-
-    created () {
-      // this.$vuetify.theme.dark = true
     },
   }
 </script>
