@@ -4,28 +4,33 @@
       v-model="drawer"
       app
       clipped
-    >
+      >
       <v-list dense>
-        <v-list-item
-          v-for="item in items"
-          :key="item.text"
-          link
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>
-              {{ item.text }}
-            </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-subheader class="mt-4 grey--text text--darken-1">ARTIST</v-subheader>
+        <v-list-item-group color="primary">
+          <v-list-item
+            v-for="(item, i) in items"
+            :key="i"
+            :to="item.url"
+          >
+            <v-list-item-icon>
+              <v-icon v-text="item.icon"></v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title v-text="item.text"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-item-group>
+
+      </v-list>
+
+      <v-list dense>
+        <v-subheader class="grey--text text--darken-1">ARTIST</v-subheader>
         <v-list>
           <v-list-item
             v-for="artist in artistList"
             :key="artist.key"
             link
+            @click="next(artist.id)"
           >
             <v-list-item-avatar>
               <img
@@ -39,23 +44,14 @@
         <v-list-item
           class="mt-4"
           link
-        >
+          @click="darkMode()"
+          >
           <v-list-item-action>
-            <v-icon color="grey darken-1">mdi-plus-circle-outline</v-icon>
+            <v-icon v-if="this.$vuetify.theme.dark" color="grey darken-1">mdi-brightness-5</v-icon>
+            <v-icon v-else color="grey darken-1">mdi-brightness-4</v-icon>
           </v-list-item-action>
-          <v-list-item-title class="grey--text text--darken-1">Browse Channels</v-list-item-title>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon color="grey darken-1">mdi-cog</v-icon>
-          </v-list-item-action>
-          <v-list-item-title class="grey--text text--darken-1">Manage Subscriptions</v-list-item-title>
-        </v-list-item>
-        <v-list-item link @click="darkMode()">
-          <v-list-item-action>
-            <v-icon color="grey darken-1">mdi-brightness-3</v-icon>
-          </v-list-item-action>
-          <v-list-item-title class="grey--text text--darken-1">Mode</v-list-item-title>
+          <v-list-item-title class="grey--text text--darken-1" v-if="this.$vuetify.theme.dark">Light</v-list-item-title>
+          <v-list-item-title class="grey--text text--darken-1" v-else>Dark</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -63,7 +59,7 @@
     <v-app-bar
       app
       clipped-left
-      color="red"
+      color="#00897B"
       dense
       >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -71,7 +67,7 @@
         class="mx-4"
         large
       >
-        mdi-alpha-b-circle
+        mdi-arrow-right-drop-circle
       </v-icon>
       <v-toolbar-title class="mr-12 align-center">
         <span class="title">Page</span>
@@ -91,6 +87,13 @@
         ></v-text-field>
       </v-row>
     </v-app-bar>
+
+    <v-alert
+      type="warning"
+      v-model="alert"
+      >
+      I'm a warning alert.
+    </v-alert>
   </div>
 </template>
 
@@ -99,13 +102,12 @@
     data: () => ({
       drawer: null,
       items: [
-        { icon: 'mdi-trending-up', text: 'Most Popular' },
-        { icon: 'mdi-youtube-subscription', text: 'Subscriptions' },
-        { icon: 'mdi-history', text: 'History' },
-        { icon: 'mdi-playlist-play', text: 'Playlists' },
-        { icon: 'mdi-clock', text: 'Watch Later' },
+        { icon: 'mdi-home', text: 'Home', url: '/' },
+        { icon: 'mdi-account-multiple', text: 'Artist', url: '/artist'},
+        { icon: 'mdi-playlist-play', text: 'Playlists', url: '/discography' },
       ],
-      artistList: []
+      artistList: [],
+      alert: false
     }),
 
     mounted () {
@@ -117,19 +119,23 @@
         this.$http
             .get("https://my-json-server.typicode.com/Sean931231/artistlist/artist")
             .then((response) => {
-              // console.log(response.data)
               this.artistList = response.data;
-              // this.artistList.forEach(element => {
-              //   let picture = element.img;
-              //   let text = element.ename;
-              // });
             })
+      },
+
+      next(id) {
+        this.$router.push({
+          path: '/artist',
+          params: id
+        })
       },
 
       darkMode() {
         this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
       }
     },
+
+    watch: {},
   }
 </script>
 

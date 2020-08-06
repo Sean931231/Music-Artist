@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+$primary-color: #fff;
+$font-color: #2c3e50;
+$secondary-color: #964c3c;
+$font-size: 5vw;
+$font-family: "Avenir", Helvetica, Arial, sans-serif;
+$serif-font: 'Indie Flower';
+$shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+p{
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+.divider {
+  padding: 2.5vw 0;
+}
+
+.bold {
+  font-weight: bold;
+  color: #000000;
+}
+
+.divider-line {
+  width: 90vw;
+  border-top: 1px solid #ecf8f6;
+  border-left: 0px;
+}
+
+.horizon-image {
+  position: relative;
+  width: 100vw;
+  height: 20vw;
+  overflow: hidden;
+  // background-color: black;
+
+  .layer1 {
+    position: absolute;
+    top: 5vw;
+    width: 100vw;
+    transform: scale(2);
+  }
+
+  .layer2 {
+    position: absolute;
+    top: 11.5vw;
+    width: 100vw;
+    transform: scale(2);
+  }
+
+  .layer3 {
+    position: absolute;
+    top: 7vw;
+    width: 100vw;
+    transform: scale(2) rotate(180deg);
+  }
+
+  .layer4 {
+    position: absolute;
+    top: 0vw;
+    width: 100vw;
+    transform: scale(2) rotate(180deg);
+  }
+}

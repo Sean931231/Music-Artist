@@ -1,5 +1,13 @@
+@import "common.scss";
+
+svg {
+  position: relative;
+  width: 600px;
+  text-align: center;
+}
+
 #JapText{
-    // font-family: $serif-font;
+    font-family: $serif-font;
     stroke: #fff;
     fill: #fff;
     stroke-dasharray: 1800;
