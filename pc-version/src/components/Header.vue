@@ -125,8 +125,10 @@
 
       next(id) {
         this.$router.push({
-          path: '/artist',
-          params: id
+          name: 'Artist',
+          query: {
+            id: id
+          }
         })
       },
 

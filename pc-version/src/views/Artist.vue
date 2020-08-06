@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <p> artist </p>
+  <div class="artist">
+
   </div>
 </template>
 
