@@ -1,6 +1,6 @@
 <template>
   <div>
-      discography
+    {{ this.$route.name }}
   </div>
 </template>
 

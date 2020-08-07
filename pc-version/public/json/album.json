@@ -1,0 +1,203 @@
+{
+  "status": "success",
+  "album_result": [
+    {
+      "id" : 1,
+      "artist_name" : "Yonezu Kenshi 米津玄師",
+      "album" : [
+        {
+          "album_id": 1,
+          "title": "1st Single Album",
+          "album_image" : "assets/image/YonezuKenshi/1st_album.jpg",
+          "release_date" : "2013.5.29発売",
+          "playlist": [
+            {
+              "brief": "サンタマリア",
+              "url" : "https://www.youtube.com/watch?v=KR54fHpcxEQ"
+            },
+            {
+              "brief": "百鬼夜行",
+              "url": null
+            },
+            {
+              "brief": "笛吹けども踊らず"
+            }
+          ]
+        },
+        {
+          "album_id": 2,
+          "title": "2nd Single Album",
+          "album_image" : "assets/image/YonezuKenshi/2nd_album.jpg",
+          "release_date" : "2013.10.23発売",
+          "playlist": [
+            {
+              "brief": "MAD HEAD LOVE",
+              "url" : "https://www.youtube.com/watch?v=xCIJJ2Rb368"
+            },
+            {
+              "brief": "ポッピンアパシー",
+              "url": "https://www.youtube.com/watch?v=pUDI2x5Y0Wo&feature=youtu.be"
+            },
+            {
+              "brief": "鳥にでもなりたい"
+            }
+          ]
+        },
+        {
+          "album_id": 3,
+          "title": "3rd Single Album",
+          "album_image" : "assets/image/YonezuKenshi/3rd_album.jpg",
+          "release_date" : "2015.1.14発売",
+          "playlist": [
+            {
+              "brief": "Flowerwall",
+              "url" : "https://www.youtube.com/watch?v=Y4_vXzyOJHE"
+            },
+            {
+              "brief": "懺悔の街"
+            },
+            {
+              "brief": "ペトリコール"
+            }
+          ]
+        },
+        {
+          "album_id": 4,
+          "title": "4th Single Album",
+          "album_image" : "assets/image/YonezuKenshi/4th_album.jpg",
+          "release_date" : "2015.9.2 発売",
+          "playlist": [
+            {
+              "brief": "アンビリーバーズ",
+              "url" : "https://www.youtube.com/watch?v=naJcqMBbAn4"
+            },
+            {
+              "brief": "旅人電燈"
+            },
+            {
+              "brief": "こころにくだもの"
+            }
+          ]
+        },
+        {
+          "album_id": 5,
+          "title": "5th Single Album",
+          "album_image" : "assets/image/YonezuKenshi/5th_album.jpg",
+          "release_date" : "2016.9.28 発売",
+          "playlist": [
+            {
+              "brief": "ナンバーナイン",
+              "url" : "https://www.youtube.com/watch?v=vP6l_p4KJpI"
+            },
+            {
+              "brief": "LOSER",
+              "url": "https://www.youtube.com/watch?v=Dx_fKPBPYUI"
+            },
+            {
+              "brief": "amen"
+            }
+          ]
+        },
+        {
+          "album_id": 6,
+          "title": "6th Single Album",
+          "album_image" : "assets/image/YonezuKenshi/6th_album.jpg",
+          "release_date" : "2017. 2.15 発売",
+          "playlist": [
+            {
+              "brief": "orion",
+              "url" : "https://www.youtube.com/watch?v=lzAyrgSqeeE"
+            },
+            {
+              "brief": "ララバイさよなら"
+            },
+            {
+              "brief": "翡翠の狼"
+            }
+          ]
+        },
+        {
+          "album_id": 7,
+          "title": "7th Single Album",
+          "album_image" : "assets/image/YonezuKenshi/7th_album.jpg",
+          "release_date" : "2017.6.21 発売",
+          "playlist": [
+            {
+              "brief": "ピースサイン",
+              "url" : "https://www.youtube.com/watch?v=9aJVr5tTTWk"
+            },
+            {
+              "brief": "Neighbourhood"
+            },
+            {
+              "brief": "ゆめくいしょうじょ"
+            },
+            {
+              "brief": "ピースサイン(Instrumental)"
+            }
+          ]
+        },
+        {
+          "album_id": 8,
+          "title": "8th Single Album",
+          "album_image" : "assets/image/YonezuKenshi/8th_album.jpg",
+          "release_date" : "2018.3.14発売",
+          "playlist": [
+            {
+              "brief": "Lemon",
+              "url" : "https://www.youtube.com/watch?v=SX_ViT4Ra7k&feature=youtu.be"
+            },
+            {
+              "brief": "クランベリーとパンケーキ"
+            },
+            {
+              "brief": "Paper Flower"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id" : 2,
+      "artist_name" : "Sirup シラップ",
+      "album" : [
+        {
+          "album_id": 1,
+          "title": "",
+          "album_image" : "",
+          "release_date" : "",
+          "playlist": [
+            {
+              "brief": "",
+              "url" : ""
+            },
+            {
+              "brief": ""
+            },
+            {
+              "brief": ""
+            }
+          ]
+        },
+        {
+          "album_id": 2,
+          "title": "",
+          "album_image" : "",
+          "release_date" : "",
+          "playlist": []
+        },
+        {
+          "album_id": 3,
+          "title": "",
+          "album_image" : "",
+          "release_date" : "",
+          "playlist": []
+        }
+      ]
+    },
+    {
+      "id" : 4,
+      "artist_name" : "Suchmos"
+    }
+  ]
+}

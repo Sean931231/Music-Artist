@@ -1,0 +1,71 @@
+{
+  "status": "success",
+  "artist_info": [
+    {
+      "id": 1,
+      "artist_name": "Yonezu Kenshi",
+      "title": "Demo Only Yonezu",
+      "date": "2020/07/02",
+      "profile_image": "assets/image/YonezuKenshi/avatar.jpg",
+      "banner" : [
+        "assets/image/YonezuKenshi/bootleg_slyder.jpg",
+        "assets/image/YonezuKenshi/Lemon_Slyder2.jpg"
+      ],
+      "info": {
+        "Name": "Yonezu Kenshi",
+        "Age": "29 years",
+        "Height": "1.88m",
+        "Born": "March 10, 1991",
+        "State": "Tokushima, Tokushima, Japan",
+        "Job": "Singer, Song Writter"
+      },
+      "social": {
+        "youtube": {
+          "img" : "assets/image/social/youtube.png",
+          "link": "https://www.youtube.com/channel/UCUCeZaZeJbEYAAzvMgrKOPQ"
+        },
+        "twitter": {
+          "img" : "assets/image/social/twitter.png",
+          "link": "https://twitter.com/hachi_08"
+        },
+        "instagram": {
+          "img" : "assets/image/social/instagram.png",
+          "link": "https://www.instagram.com/hachi_08"
+        }
+      },
+      "intro": "Kenshi Yonezu is a Japanese musician, singer-songwriter, record producer and illustrator who began releasing Vocaloid music under the stage name Hachi in 2009. <br>In 2012 he debuted under his real name, releasing music with his own voice. <br>Also known as: Hachi",
+      "author" : "Sean"
+    },
+    {
+      "id": 2,
+      "artist_name": "Sirup",
+      "title": "Demo Only Yonezu",
+      "date": "2020/07/03",
+      "profile_image": "assets/image/Sirup/avatar1.jpg",
+      "banner" : [
+        "assets/image/Sirup/kyotaro.jpg",
+        "assets/image/Sirup/sirup.jpg",
+        "assets/image/Sirup/sirup-banner.jpg"
+      ],
+      "info": {
+        "Name": "Sirup",
+        "Age": "",
+        "Born": "",
+        "State": "Kansai, Japan",
+        "Job": "Singer, Song Writter"
+      },
+      "social": {
+        "youtube": {
+          "img" : "assets/image/social/youtube.png",
+          "link": "https://www.youtube.com/channel/UCT0DEDLRQmlcBE93gLzWJ5A"
+          },
+        "instagram": {
+          "img" : "assets/image/social/instagram.png",
+          "link": "https://www.instagram.com/sirup_insta/"
+        }
+      },
+      "intro": "Sirup is the name of a project by Osaka-born Japanese singer-songwriter Kyotaro (2) (styled KYOtaro), in which he collaborates with various R&B/hip-hop music creators to make a new sound. The name Sirup (シラップ) is a contraction of Sing and Rap.",
+      "author" : "Sean"
+    }
+  ]
+}

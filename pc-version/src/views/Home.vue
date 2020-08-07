@@ -1,7 +1,14 @@
 <template>
   <div class="home">
-    <DarkTitle v-if="this.$vuetify.theme.dark"/>
-    <Title v-else />
+    <v-container class="fill-height">
+      <v-row
+        justify="center"
+        align="center"
+        >
+        <DarkTitle v-if="this.$vuetify.theme.dark"/>
+        <Title v-else />
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -20,3 +27,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  @import '../styles/home.scss';
+</style>

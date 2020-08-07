@@ -1,0 +1,45 @@
+{
+  "status": "success",
+  "artist" : [
+    {
+      "id" : 1,
+      "img": "assets/image/YonezuKenshi/avatar.jpg",
+      "ename": "Yonezu Kenshi",
+      "cname": "米津玄師",
+      "name" : 0,
+      "label": "Yonezu Kenshi"
+    },
+    {
+      "id" : 2,
+      "img": "assets/image/Sirup/avatar.jpg",
+      "ename": "Sirup",
+      "cname": "シラップ",
+      "name" : 1,
+      "label": "Sirup"
+    },
+    {
+      "id" : 3,
+      "img": "assets/image/OneOkRock/avatar.png",
+      "ename": "One Ok Rock",
+      "cname": "",
+      "name": 2,
+      "label": "One Ok Rock"
+    },
+    {
+      "id" : 4,
+      "img": "assets/image/Suchmos/avatar.jpg",
+      "ename": "Suchmos",
+      "cname": "",
+      "name": 3,
+      "label": "Suchmos"
+    },
+    {
+      "id" : 5,
+      "img": "assets/image/KingGnu/kingGnu.jpg",
+      "ename": "King Gnu",
+      "cname": "",
+      "name": 4,
+      "label": "King Gnu"
+    }
+  ]
+}

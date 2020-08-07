@@ -2,11 +2,8 @@
   <v-app>
     <Header />
     <v-main>
-      <v-container class="fill-height">
-        <v-row
-          justify="center"
-          align="center"
-        >
+      <v-container>
+        <v-row>
           <router-view />
         </v-row>
       </v-container>
