@@ -1,14 +1,7 @@
 <template>
   <div class="home">
-    <v-container class="fill-height">
-      <v-row
-        justify="center"
-        align="center"
-        >
-        <DarkTitle v-if="this.$vuetify.theme.dark"/>
-        <Title v-else />
-      </v-row>
-    </v-container>
+    <DarkTitle v-if="this.$vuetify.theme.dark"/>
+    <Title v-else />
   </div>
 </template>
 

@@ -3,7 +3,7 @@
   "artist" : [
     {
       "id" : 1,
-      "img": "assets/image/YonezuKenshi/avatar.jpg",
+      "img": "assets/image/YonezuKenshi/kenshi.jpg",
       "ename": "Yonezu Kenshi",
       "cname": "米津玄師",
       "name" : 0,
@@ -19,7 +19,7 @@
     },
     {
       "id" : 3,
-      "img": "assets/image/OneOkRock/avatar.png",
+      "img": "assets/image/OneOkRock/avatar2.jpg",
       "ename": "One Ok Rock",
       "cname": "",
       "name": 2,
