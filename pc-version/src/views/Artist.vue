@@ -3,8 +3,9 @@
     <div class="artist">
       <div class="page-title">
         <v-row>
-          <v-col>
-            {{ this.$route.name }}
+          <v-col
+            cols="12">
+            <p class="text-left text-size-10"> {{ this.$route.name }} </p>
           </v-col>
         </v-row>
       </div>
@@ -14,8 +15,8 @@
           <v-col
             v-for="list in artistslist" :key="list.key"
             cols="12"
-            md="4"
-            lg="3"
+            md="3"
+            lg="4"
             sm="6"
             >
             <v-card
@@ -41,13 +42,7 @@
                 <v-btn
                   color="orange"
                   text
-                >
-                  Share
-                </v-btn>
-
-                <v-btn
-                  color="orange"
-                  text
+                  @click="artistinfo(list.id)"
                 >
                   Explore
                 </v-btn>
@@ -89,6 +84,15 @@
             .then((response) => {
               this.artistsinfo = response.data.artist_info.find(element => element.id == pageid);
             })
+      },
+
+      artistinfo(id) {
+        this.$router.push({
+          name: 'Artist_Info',
+          query: {
+            id: id
+          }
+        })
       }
     },
   }

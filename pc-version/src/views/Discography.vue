@@ -6,7 +6,14 @@
 
 <script>
   export default {
-
+    mounted () {
+      this.getPath();
+    },
+    methods: {
+      getPath() {
+        console.log(this.$route.meta);
+      }
+    },
   }
 </script>
 

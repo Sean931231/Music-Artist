@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Info from '../views/ArtistInfo.vue'
 
 Vue.use(VueRouter)
 
@@ -8,7 +9,12 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      breadcrumb: [
+        { name: 'Home' }
+      ]
+    }
   },
   {
     path: '/about',
@@ -18,6 +24,12 @@ Vue.use(VueRouter)
     // which is lazy-loaded when the route is visited.
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/About.vue')
+    },
+    meta: {
+      breadcrumb: [
+        { name: 'Home', link: '/' },
+        { name: 'About' }
+      ]
     }
   },
   {
@@ -25,6 +37,24 @@ Vue.use(VueRouter)
     name: 'Artist',
     component: function () {
       return import(/* webpackChunkName: "artist" */ '../views/Artist.vue')
+    },
+    meta: {
+      breadcrumb: [
+        { name: 'Home', link: '/' },
+        { name: 'Artist' }
+      ]
+    },
+  },
+  {
+    path: '/artistinfo',
+    name: 'Artist_Info',
+    component: Info,
+    meta: {
+      breadcrumb: [
+        { name: 'Home', link: '/' },
+        { name: 'Artist', link: 'artist' },
+        { name: 'Info' }
+      ]
     }
   },
   {
@@ -32,8 +62,14 @@ Vue.use(VueRouter)
     name: 'Discography',
     component: function () {
       return import(/* webpackChunkName: "discography" */ '../views/Discography.vue')
+    },
+    meta: {
+      breadcrumb: [
+        { name: 'Home', link: '/' },
+        { name: 'Discography' }
+      ]
     }
-  }
+  },
 ]
 
 const router = new VueRouter({

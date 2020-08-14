@@ -2,7 +2,7 @@
   <v-app>
     <Header />
     <v-main>
-      <v-container class="fill-height">
+      <v-container>
         <v-row
           justify="center"
           align="center"
