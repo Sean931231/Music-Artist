@@ -87,13 +87,6 @@
         ></v-text-field>
       </v-row>
     </v-app-bar>
-
-    <v-alert
-      type="warning"
-      v-model="alert"
-      >
-      I'm a warning alert.
-    </v-alert>
   </div>
 </template>
 
@@ -107,7 +100,6 @@
         { icon: 'mdi-playlist-play', text: 'Playlists', url: '/discography' },
       ],
       artistList: [],
-      alert: false
     }),
 
     mounted () {
