@@ -10,7 +10,6 @@
                 <v-icon>mdi-chevron-right</v-icon>
               </template>
             </v-breadcrumbs>
-            <p> {{ test }} </p>
           </v-col>
         </v-row>
       </div>
@@ -67,23 +66,7 @@
     data() {
       return {
         artistslist: [],
-        breadcrumb:[
-          {
-            text: 'Home',
-            disabled: false,
-            href: '/',
-          },
-          {
-            text: 'Artist',
-            disabled: false,
-            href: 'artist'
-          }
-        ],
-        test: [
-          {
-            text: '',
-          }
-        ]
+        breadcrumb:[]
       }
     },
     mounted () {
@@ -92,14 +75,7 @@
 
     methods: {
       getArtistList() {
-        this.$route.meta.breadcrumb.forEach(element => {
-          console.log(element);
-          this.test = [
-            {
-              text: element.name
-            }
-          ]
-        });
+        this.breadcrumb = this.$route.meta.breadcrumb;
 
         this.$http
             .get("/json/artist.json")

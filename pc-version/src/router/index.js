@@ -12,7 +12,7 @@ Vue.use(VueRouter)
     component: Home,
     meta: {
       breadcrumb: [
-        { name: 'Home' }
+        { text: 'Home' }
       ]
     }
   },
@@ -27,8 +27,8 @@ Vue.use(VueRouter)
     },
     meta: {
       breadcrumb: [
-        { name: 'Home', href: '/' },
-        { name: 'About' }
+        { text: 'Home', href: '/' },
+        { text: 'About',  disabled: true, }
       ]
     }
   },
@@ -40,8 +40,8 @@ Vue.use(VueRouter)
     },
     meta: {
       breadcrumb: [
-        { name: 'Home', href: '/' },
-        { name: 'Artist' }
+        { text: 'Home', href: '/' },
+        { text: 'Artist',  disabled: true, }
       ]
     },
   },
@@ -51,9 +51,9 @@ Vue.use(VueRouter)
     component: Info,
     meta: {
       breadcrumb: [
-        { name: 'Home', href: '/' },
-        { name: 'Artist', href: 'artist' },
-        { name: 'Info' }
+        { text: 'Home', href: '/' },
+        { text: 'Artist', href: '/artist' },
+        { text: 'Info', disabled: true, }
       ]
     }
   },
@@ -65,8 +65,8 @@ Vue.use(VueRouter)
     },
     meta: {
       breadcrumb: [
-        { name: 'Home', href: '/' },
-        { name: 'Discography' }
+        { text: 'Home', href: '/' },
+        { text: 'Discography',  disabled: true, }
       ]
     }
   },
